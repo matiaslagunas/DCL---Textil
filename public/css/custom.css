@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Color claro de fondo */
+}
+
+/* Ajusta el tamaño del logo */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Cambiar el color de los enlaces al pasar el mouse */
+.nav-link:hover {
+    color: #000000; /* Cambia este valor al color que prefieras */
+    text-decoration: underline;
+}
+
+/* Espaciado adicional entre los enlaces */
+.nav-item {
+    margin-left: 10px;
+}
+
+/* Contenedor del navbar */
+.container {
+    max-width: 1300px;
+}
+
+/* Estilo base del botón "Contáctanos" */
+.btn-contactanos {
+    background-color: orange; /* Fondo naranja */
+    color: black; /* Texto negro */
+    border: 2px solid orange; /* Borde naranja */
+    padding: 6px 15px; /* Relleno más pequeño */
+    font-size: 14px; /* Tamaño de la fuente reducido */
+    font-weight: bold; /* Negrita */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+    display: inline-block; /* Asegura que el botón no ocupe toda la línea */
+    text-align: center; /* Alineación de texto en el botón */
+    line-height: 1.5; /* Para centrar el texto verticalmente */
+}
+
+/* Efecto hover del botón "Contáctanos" */
+.btn-contactanos:hover {
+    background-color: transparent; /* Fondo transparente */
+    color: orange; /* Texto naranja */
+    border-color: orange; /* Bordes naranjas */
+}
+
+/* Para asegurar que el botón se vea bien en dispositivos pequeños */
+@media (max-width: 768px) {
+    .btn-contactanos {
+        font-size: 14px; /* Reduce el tamaño del botón en pantallas pequeñas */
+        padding: 8px 16px; /* Ajusta el relleno para pantallas pequeñas */
+    }
+}
+
+/* Asegura que el botón quede alineado con los demás elementos del navbar */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center; /* Centra el botón verticalmente */
+}
+
+
+
+.carrusel-contenedor {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel-images {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se apilen */
+    transition: transform 1s ease-in-out; /* Transición suave */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    max-height: 650px; /* Altura máxima */
+    object-fit: cover;
+    object-position: center center;
+    flex-shrink: 0;
+  }

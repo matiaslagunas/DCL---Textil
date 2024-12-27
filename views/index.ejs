@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCL</title>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-    <%- include('partials/header') %>
+    <%- include('partials/header') %> <!-- No es necesario pasar 'title' explícitamente aquí -->
+    <section class="carrusel-contenedor">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="/images/img_fabricaTextil1.jpg" alt="Imagen 1" class="carousel-image">
+                <img src="/images/img_fabricaTextil2.jpg" alt="Imagen 2" class="carousel-image">
+                <!-- Duplicar las imágenes para el bucle infinito -->
+                <img src="/images/img_fabricaTextil1.jpg" alt="Imagen 1 (duplicada)" class="carousel-image">
+                <img src="/images/img_fabricaTextil2.jpg" alt="Imagen 2 (duplicada)" class="carousel-image">
+            </div>
+          </div>
+    </section>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/carrousel.js"></script>
 </body>
 </html>
