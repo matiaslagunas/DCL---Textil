@@ -86,3 +86,100 @@ body {
     object-position: center center;
     flex-shrink: 0;
   }
+
+
+
+
+  /* propuestas de valor */
+
+.propuesta-de-valor_contenedor{
+    width: 100%;
+    height: auto;
+    margin: 5em 0; 
+    padding: 0 15%;
+}
+.contenedor-titulo-propuesta{
+    width: 100%;
+    
+}
+.contenedor-titulo-propuesta h2{
+    font-size: 40px;
+}
+
+
+.grid-propuestaIcons{
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 100px 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1_item, .item2_item, .item3_item, .item4_item, .item5_item, .item6_item, .item7_item, .item8_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item5_item, .item6_item, .item7_item, .item8_item{
+font-size: 18px;
+text-align: center;
+}
+
+.item1_item img, .item2_item img, .item3_item img, .item4_item img{
+    width: 100px;
+    height: auto;
+}
+
+/* seccion marcas home */
+
+.marcas-home_contenedor{
+    padding:5em 0 5em 0;
+    width: 100%;
+    height: auto;
+    padding-top: 9em;
+    background: radial-gradient(circle, orange, transparent, transparent);
+}
+
+.titulo-subtitulo{
+    width: 100%;
+    text-align: center;
+}
+.titulo-subtitulo h2{
+    font-size: 40px;
+}
+.titulo-subtitulo p{
+    margin-bottom: 4em;
+}
+
+
+.marcas-logos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 3em;
+
+    justify-content: center;
+}
+
+.marcas-logos div div img{
+    width: 250px;
+    height: auto;
+}
+.marcas-logos div{
+    width: 350px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em 1em;
+    background-color: #fff;
+}
+
+.parrafo-logos{
+text-align: center;
+width: 100%;
+}
+.parrafo-logos a{
+    color: #000000;
+}
