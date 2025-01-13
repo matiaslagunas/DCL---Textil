@@ -1,47 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.querySelector(".grid-propuestaIcons");
-    const marcasSection = document.querySelector(".marcas-home_contenedor");
-    const allSections = document.querySelectorAll("section.animated");
+    // Seleccionamos las secciones a observar
+    const sections = document.querySelectorAll('.animated');
 
     const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
+        (entries, observer) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    grid.classList.add("active");
-                }
-            });
-        },
-        { threshold: 0.3 }
-    );
-    observer.observe(grid);
-
-    const marcasObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    marcasSection.classList.add("active");
+                    // Cuando la sección es visible, se agrega la clase active
+                    entry.target.classList.add('active');
+                    entry.target.classList.remove('inactive');
                 } else {
-                    marcasSection.classList.remove("active");
+                    // Cuando la sección deja de ser visible, se agrega la clase inactive
+                    entry.target.classList.remove('active');
+                    entry.target.classList.add('inactive');
                 }
             });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 } // Se activa cuando al menos el 30% de la sección es visible
     );
-    marcasObserver.observe(marcasSection);
 
-    allSections.forEach((section) => {
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    } else {
-                        entry.target.classList.remove("active");
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-        sectionObserver.observe(section);
+    // Observar todas las secciones
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
