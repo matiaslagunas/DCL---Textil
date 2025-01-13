@@ -23,5 +23,5 @@ function moveSlide() {
   }
 }
 
-// Cambiar de imagen cada 3 segundos
-setInterval(moveSlide, 5000);
+
+
