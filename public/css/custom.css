@@ -145,12 +145,20 @@ body {
 }
 
 /* Marcas */
+.titulo-subtitulo h2{
+    font-size: 50px;
+}
+.titulo-subtitulo p{
+    font-size: 20px;
+}
 .marcas-home_contenedor {
     padding: 4em 10%;
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 6em 0;
+    background: radial-gradient(circle, orange 0%, transparent 45%, transparent 100%);
 }
 
 .marcas-home_contenedor.active {
@@ -159,6 +167,7 @@ body {
 }
 
 .marcas-logos {
+    padding: 5em;
     display: flex;
     justify-content: space-evenly;
     margin-top: 2em;
@@ -166,26 +175,45 @@ body {
 
 .contenedor-img1, .contenedor-img2, .contenedor-img3 {
     width: 300px;
-    height: 500px;
+    height: 450px;
     padding: 10px;
     border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 00px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
 }
 
 .parrafo-logos {
     margin-top: 10px;
     font-size: 14px;
+
+}
+.parrafo-logos a{ 
+    color: #000000;
 }
 .imagen img{
     width: 250px;
     height: auto;
+    margin-top: 6em;
 }
+
+
+
+
+
 /* Comentarios */
 .comentarios-container {
-    margin-top: 10em;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-top: 3em;
+    padding:0 3em;
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: space-around;
+    gap: 10px;
+    grid-template-columns: 2fr auto 3fr;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -196,9 +224,11 @@ body {
     transform: translateY(0);
 }
 
-.comentario textarea {
-    border: none;
+.comentario div div {
+    border: 1px solid orange;
     outline: none;
+    height: 100px;
+    width: 35%;
     background: transparent;
     font-size: 18px;
     line-height: 1.5;
@@ -206,13 +236,16 @@ body {
     padding: 10px;
     min-height: 100px;
 }
-
-.comentario .derecha {
-    max-width: 48%;
+.comentario-izq {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
-
-.comentario .izquierda {
-    max-width: 48%;
+.comentario-izq p {
+    font-size: 24px; /* Tamaño de la letra más grande */
+    font-weight: bold; /* Opcional, para hacerlo más notorio */
+    color: #333; /* Color más oscuro */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 .linea-separacion {
