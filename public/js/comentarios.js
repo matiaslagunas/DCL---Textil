@@ -7,20 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para intercambiar comentarios
     function rotateComments() {
-        // Obtener el texto actual del comentario izquierdo
-        const currentLeftText = leftComment.querySelector("p").innerHTML;
+        // Obtener el autor y texto actuales del lado izquierdo
+        const leftAuthor = leftComment.querySelector("h2 b").innerText;
+        const leftText = leftComment.querySelector("p").innerHTML;
 
-        // Obtener el texto del comentario derecho actual
-        const currentRightText = rightComments[currentIndex].querySelector("div p").innerHTML;
+        // Obtener el autor y texto del comentario derecho actual
+        const rightComment = rightComments[currentIndex];
+        const rightAuthor = rightComment.querySelector("h5 b").innerText;
+        const rightText = rightComment.querySelector("p").innerHTML;
 
-        // Intercambiar el texto
-        leftComment.querySelector("p").innerHTML = currentRightText;
-        rightComments[currentIndex].querySelector("div p").innerHTML = currentLeftText;
+        // Intercambiar autor y texto
+        leftComment.querySelector("h2 b").innerText = rightAuthor;
+        leftComment.querySelector("p").innerHTML = rightText;
+
+        rightComment.querySelector("h5 b").innerText = leftAuthor;
+        rightComment.querySelector("p").innerHTML = leftText;
 
         // Mover al siguiente comentario en la derecha
         currentIndex = (currentIndex + 1) % rightComments.length;
     }
 
     // Iniciar la rotación cada 10 segundos
-    setInterval(rotateComments, 10000);
+    setInterval(rotateComments, 8000);
 });

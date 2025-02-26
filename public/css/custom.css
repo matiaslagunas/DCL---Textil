@@ -40,9 +40,9 @@ body {
 }
 
 .btn-contactanos {
-    background-color: orange;
-    color: black;
-    border: 2px solid orange;
+    background-color: rgb(73, 82, 207);
+    color: white;
+    border: 2px solid rgb(73, 82, 207);
     padding: 6px 15px;
     font-size: 14px;
     font-weight: bold;
@@ -55,8 +55,8 @@ body {
 
 .btn-contactanos:hover {
     background-color: transparent;
-    color: orange;
-    border-color: orange;
+    color: rgb(73, 82, 207);
+    border-color: rgb(73, 82, 207);
 }
 
 @media (max-width: 768px) {
@@ -69,6 +69,9 @@ body {
 .navbar-nav .nav-item {
     display: flex;
     align-items: center;
+}
+.navbar-brand img {
+    color: rgb(73, 82, 207);;
 }
 
 .carrusel-contenedor {
@@ -86,7 +89,9 @@ body {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 1s ease-in-out;
+
 }
+
 
 .carousel-image {
     width: 100%;
@@ -206,7 +211,7 @@ body {
 
 /* Comentarios */
 .comentarios-container {
-    margin-top: 3em;
+    margin: 3em 0 5em 0;
     padding:0 3em;
     width: 100%;
     height: auto;
@@ -257,3 +262,4 @@ body {
 #right-text-1, #right-text-2, #right-text-3, #right-text-4 {
     margin-bottom: 1em;
 }
+

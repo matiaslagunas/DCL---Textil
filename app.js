@@ -6,6 +6,7 @@ const port = 3100;
 // Importar rutas
 const indexRoute = require('./routes/indexRoute');
 
+
 // Configura EJS como motor de plantillas
 app.set('view engine', 'ejs');  // Establece EJS como motor de vista
 app.set('views', path.join(__dirname, 'views'));  // Establece el directorio de vistas

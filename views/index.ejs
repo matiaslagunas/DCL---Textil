@@ -78,22 +78,21 @@
     <!-- Comentarios -->
     <div class="comentarios-container animated">
         <div class="comentario-izq izquierda">
-            <div  readonly id="left-text"><p><b>Fantoche:</b> "La colaboración con DCL+ ha sido excepcional. Su enfoque en la calidad y el detalle en cada etapa del proceso de producción ha sido clave para el éxito de nuestras colecciones. La flexibilidad y el compromiso de su equipo nos han permitido alcanzar resultados consistentes y satisfactorios."</p></div >
+            <div readonly id="left-text">
+                <h2><b><%= comentarios[0].autor %>:</b></h2>
+                <p>"<%= comentarios[0].texto %>"</p>
+            </div>
         </div>
         <div class="linea-separacion"></div>
         <div class="comentarios-derecha">
-            <div class="comentario derecha" id="right-text-1">
-                <div  readonly><p><b>Head:</b> "Estamos muy satisfechos con la calidad y el cumplimiento de plazos en cada uno de nuestros pedidos con DCL+. Su capacidad de adaptarse a nuestras exigencias de producción es excepcional y su equipo siempre está dispuesto a superar nuestras expectativas. Definitivamente un socio confiable en la industria textil."</p></div >
-            </div>
-            <div class="comentario derecha" id="right-text-2">
-                <div  readonly><p><b>Puma:</b> "La colaboración con DCL+ ha sido clave para lograr la calidad y los tiempos de entrega que necesitamos en Puma. Su atención al detalle y su flexibilidad para cumplir con nuestras demandas específicas nos dan la confianza de seguir trabajando con ellos a largo plazo."</p></div >
-            </div>
-            <div class="comentario derecha" id="right-text-3">
-                <div  readonly><p><b>Reef:</b> "En Reef, valoramos la excelencia y la consistencia, y eso es exactamente lo que hemos recibido de DCL+. Siempre cumplen con los estándares más altos de calidad, y su equipo ha demostrado ser altamente profesional y confiable en cada proyecto que hemos manejado juntos."</p></div >
-            </div>
-            <div class="comentario derecha" id="right-text-4">
-                <div  readonly><p><b>Ruge:</b> "Gracias a DCL+, hemos podido mantener la calidad y la innovación en nuestras colecciones. La fábrica ha sido fundamental para nuestra producción, asegurando que cada pieza cumpla con nuestras estrictas expectativas. Su capacidad de respuesta y su compromiso son invaluables para nuestra marca."</p></div >
-            </div>
+            <% for (let i = 1; i < comentarios.length; i++) { %>
+                <div class="comentario derecha" id="right-text-<%= i %>">
+                    <div class="display" readonly>
+                        <h5><b><%= comentarios[i].autor %>:</b></h2>
+                        <p>"<%= comentarios[i].texto %>"</p>
+                    </div>
+                </div>
+            <% } %>
         </div>
     </div>
     <script src="/js/comentarios.js"></script>
