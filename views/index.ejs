@@ -12,20 +12,12 @@
 <body>
     <%- include('partials/header') %> <!-- No es necesario pasar 'title' explícitamente aquí -->
     
-    <!-- Carrusel -->
-    <section class="carrusel-contenedor">
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="/images/img_fabricaTextil1.jpg" alt="Imagen 1" class="carousel-image">
-                <img src="/images/img_fabricaTextil2.jpg" alt="Imagen 2" class="carousel-image">
-                <!-- Duplicar las imágenes para el bucle infinito -->
-                <img src="/images/img_fabricaTextil1.jpg" alt="Imagen 1 (duplicada)" class="carousel-image">
-                <img src="/images/img_fabricaTextil2.jpg" alt="Imagen 2 (duplicada)" class="carousel-image">
-                <img src="/images/img_fabricaTextil1.jpg" alt="Imagen 1 (triplicada)" class="carousel-image">
-                <img src="/images/img_fabricaTextil2.jpg" alt="Imagen 2 (triplicada)" class="carousel-image">
-            </div>
-        </div>
-    </section>
+    <!-- Video como banner -->
+<video autoplay loop muted playsinline class="banner-video">
+    <source src="/images/video-baner-dcl.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+</video>
+      
 
     <!-- Propuesta de valor -->
     <section class="propuesta-de-valor_contenedor animated">
@@ -33,7 +25,7 @@
             <h2>Propuesta de valor</h2>
         </div>
         <div class="grid-propuestaIcons animated">
-            <div class="item1_item"><img src="/images/logo-medalla.svg" alt=""></div>
+            <div class="item1_item"><img src="/images/logo-medalla.svg" style="color: #007cd5"></div>
             <div class="item2_item"><img src="/images/logo-escudo.svg" alt=""></div>
             <div class="item3_item"><img src="/images/logo-mecanica.svg" alt=""></div>
             <div class="item4_item"><img src="/images/logo-hand.svg" alt=""></div>
@@ -98,5 +90,6 @@
     <script src="/js/comentarios.js"></script>
     <script src="/js/carrousel.js"></script>
     <script src="/js/interacciones.js"></script>
+    <script src="/js/marcas.js"></script>
 </body>
 </html>

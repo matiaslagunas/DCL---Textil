@@ -1,5 +1,4 @@
-/* Añadir estas reglas a tu CSS */
-
+/* ANIMACIONES */
 .animated {
     opacity: 0;
     transform: translateY(50px);
@@ -16,6 +15,7 @@
     transform: translateY(50px);
 }
 
+/* ESTILO GENERAL */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -24,6 +24,7 @@ body {
 .navbar-brand img {
     max-height: 50px;
     width: auto;
+    opacity: 1.5;
 }
 
 .nav-link:hover {
@@ -35,14 +36,32 @@ body {
     margin-left: 10px;
 }
 
+/* HEADER TRANSPARENTE */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #b2d5ee;
+    opacity: 0.85; /* Opacidad del 60% */
+    z-index: 10; /* Asegura que esté por encima del video */
+}
+
+/* NAVBAR TRANSPARENTE */
+.navbar {
+    background-color: #b2d5ee !important;
+    opacity: 0.85; /* Transparencia en la barra de navegación */
+}
+
+/* CONTENEDOR */
 .container {
     max-width: 1300px;
 }
 
+/* BOTÓN "CONTÁCTANOS" */
 .btn-contactanos {
-    background-color: rgb(73, 82, 207);
+    background-color: #007cd5;
     color: white;
-    border: 2px solid rgb(73, 82, 207);
+    border: 2px solid #007cd5;
     padding: 6px 15px;
     font-size: 14px;
     font-weight: bold;
@@ -55,8 +74,8 @@ body {
 
 .btn-contactanos:hover {
     background-color: transparent;
-    color: rgb(73, 82, 207);
-    border-color: rgb(73, 82, 207);
+    color: #007cd5;
+    border-color: #007cd5;
 }
 
 @media (max-width: 768px) {
@@ -70,10 +89,19 @@ body {
     display: flex;
     align-items: center;
 }
-.navbar-brand img {
-    color: rgb(73, 82, 207);;
+
+
+/* VIDEO COMO BANNER */
+.banner-video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Permite que el header se vea sobre el video */
 }
 
+/* CARRUSEL */
 .carrusel-contenedor {
     width: 100%;
     max-width: 100%;
@@ -89,18 +117,9 @@ body {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 1s ease-in-out;
-
 }
 
-
-.carousel-image {
-    width: 100%;
-    max-height: 650px;
-    object-fit: cover;
-    object-position: center center;
-    flex-shrink: 0;
-}
-
+/* SECCIÓN DE PROPUESTA DE VALOR */
 .propuesta-de-valor_contenedor {
     width: 100%;
     height: auto;
@@ -110,6 +129,7 @@ body {
 
 .contenedor-titulo-propuesta {
     width: 100%;
+    text-align: center;
 }
 
 .contenedor-titulo-propuesta h2 {
@@ -128,7 +148,8 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.item1_item, .item2_item, .item3_item, .item4_item, .item5_item, .item6_item, .item7_item, .item8_item {
+.item1_item, .item2_item, .item3_item, .item4_item, 
+.item5_item, .item6_item, .item7_item, .item8_item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,6 +163,7 @@ body {
 .item1_item img, .item2_item img, .item3_item img, .item4_item img {
     width: 100px;
     height: auto;
+    color: #007cd5;
 }
 
 .grid-propuestaIcons.active {
@@ -149,13 +171,15 @@ body {
     transform: translateY(0);
 }
 
-/* Marcas */
-.titulo-subtitulo h2{
+/* SECCIÓN MARCAS */
+.titulo-subtitulo h2 {
     font-size: 50px;
 }
-.titulo-subtitulo p{
+
+.titulo-subtitulo p {
     font-size: 20px;
 }
+
 .marcas-home_contenedor {
     padding: 4em 10%;
     text-align: center;
@@ -163,7 +187,7 @@ body {
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     padding: 6em 0;
-    background: radial-gradient(circle, orange 0%, transparent 45%, transparent 100%);
+    background: radial-gradient(circle, #007cd5 0%, transparent 45%, transparent 100%);
 }
 
 .marcas-home_contenedor.active {
@@ -194,25 +218,22 @@ body {
 .parrafo-logos {
     margin-top: 10px;
     font-size: 14px;
-
 }
-.parrafo-logos a{ 
+
+.parrafo-logos a { 
     color: #000000;
 }
-.imagen img{
+
+.imagen img {
     width: 250px;
     height: auto;
     margin-top: 6em;
 }
 
-
-
-
-
-/* Comentarios */
+/* SECCIÓN COMENTARIOS */
 .comentarios-container {
     margin: 3em 0 5em 0;
-    padding:0 3em;
+    padding: 0 3em;
     width: 100%;
     height: auto;
     display: grid;
@@ -230,7 +251,7 @@ body {
 }
 
 .comentario div div {
-    border: 1px solid orange;
+    border: 1px solid #007cd5;
     outline: none;
     height: 100px;
     width: 35%;
@@ -241,20 +262,22 @@ body {
     padding: 10px;
     min-height: 100px;
 }
+
 .comentario-izq {
     width: 100%;
     height: 100%;
     padding: 20px;
 }
+
 .comentario-izq p {
-    font-size: 24px; /* Tamaño de la letra más grande */
-    font-weight: bold; /* Opcional, para hacerlo más notorio */
-    color: #333; /* Color más oscuro */
-    transition: font-size 0.3s ease, color 0.3s ease; /* Transición suave */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
 
 .linea-separacion {
-    border-left: 2px solid orange;
+    border-left: 2px solid #007cd5;
     height: 100%;
     margin: 0 2%;
 }
@@ -263,3 +286,105 @@ body {
     margin-bottom: 1em;
 }
 
+
+/* Asegurar que el título general siempre esté arriba */
+.titulo-subtitulo {
+    position: relative; /* Evita que se mezcle con los contenedores */
+    z-index: 10; /* Mantenerlo siempre por encima */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Darle espacio antes de las marcas */
+}
+
+/* Contenedor general cuando está expandido */
+.marcas-home_contenedor.expandido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para la marca expandida */
+.contenedor-img1.expandido, 
+.contenedor-img2.expandido, 
+.contenedor-img3.expandido {
+    width: 90%; /* Ocupar casi todo el ancho */
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Asegurar que todo esté en columna */
+    align-items: center; /* Centrar contenido */
+}
+
+/* Asegurar que el título y demás elementos queden bien alineados */
+.contenedor-img1.expandido h2, 
+.contenedor-img2.expandido h2, 
+.contenedor-img3.expandido h2 {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+/* Contenedor general */
+.marcas-home_contenedor {
+    text-align: center;
+}
+
+/* Asegurar que el título no se mueva */
+.titulo-subtitulo {
+    margin-bottom: 20px;
+}
+
+/* Contenedor de las marcas */
+.marcas-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos básicos de cada marca */
+.contenedor-img1,
+.contenedor-img2,
+.contenedor-img3 {
+    width: 30%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Cuando una marca está expandida, ocupa todo el ancho */
+.marcas-logos.expandido {
+    justify-content: center;
+}
+
+.contenedor-img1.expandido,
+.contenedor-img2.expandido,
+.contenedor-img3.expandido {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ocultar las otras marcas cuando una está expandida */
+.marcas-logos.expandido .contenedor-img1:not(.expandido),
+.marcas-logos.expandido .contenedor-img2:not(.expandido),
+.marcas-logos.expandido .contenedor-img3:not(.expandido) {
+    display: none;
+}
+
+/* Estilos del botón "Ver más" */
+.parrafo-logos a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.parrafo-logos a:hover {
+    background: #0056b3;
+}
