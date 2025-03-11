@@ -374,19 +374,22 @@ body {
 }
 
 /* Estilos del botón "Ver más" */
+.parrafo-logos{
+    color: #000;
+}
 .parrafo-logos a {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 12px;
-    background: #007bff;
-    color: white;
+    background: transparent;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: color 0.3s;
 }
 
 .parrafo-logos a:hover {
-    background: #0056b3;
+    color: #007cd5;
 }
 .marcas-home_contenedor {
     text-align: center;
@@ -453,7 +456,7 @@ body {
 .marca .parrafo-logos a {
     display: inline-block;
     margin-top: 10px;
-    color: blue;
+
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
@@ -484,7 +487,6 @@ body {
     display: flex;
     flex-direction: column;
     width: calc(33.33% - 10px); /* Tres marcas en una fila */
-    transition: width 0.3s ease-in-out;
     overflow: hidden;
 }
 
@@ -494,7 +496,12 @@ body {
 }
 
 .marca.expandida {
-    width: 320px; /* Se ensancha al expandirse */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: flex-start;
+    padding: 40px;
+    position: relative;
 }
 
 
@@ -509,7 +516,7 @@ body {
     height: 400px; /* Mantiene la altura fija */
     padding: 20px;
     border: 1px solid #ddd;
-    transition: width 0.3s ease; /* Transición suave */
+    
     position: relative;
 
 }
@@ -546,3 +553,15 @@ body {
 }
 
 
+.marca.expandida .imagen {
+    flex: 1;
+    max-width: 250px;
+    text-align: center; /* Asegura que la imagen esté bien alineada */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la imagen en el contenedor */
+}
+.marca.expandida .imagen img {
+    margin: 0 !important; /* Elimina cualquier margen */
+    max-height: 100%; /* Asegura que la imagen se ajuste al contenedor */
+}
