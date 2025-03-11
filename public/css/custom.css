@@ -505,20 +505,23 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px; /* Espacio entre elementos */
-    width: 200px; /* Ajustalo según necesites */
-    height: 100%; /* Asegura que el contenedor tenga altura */
-    position: relative; /* Para controlar la posición de "Ver más" */
+    gap: 10px;
+    width: auto; /* Ancho automático según el contenido */
+    height: 400px; /* Alto fijo */
+    position: relative; /* Para posicionar el botón */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Opcional, solo para ver el contorno */
 }
 
 .marca .imagen {
     max-width: 100%;
+    height: auto;
 }
 
 .marca .parrafo-logos {
-    margin-top: auto; /* Empuja el botón hacia el fondo */
+    margin-top: auto;
     position: absolute;
-    bottom: 10px; /* Lo ajusta al borde inferior */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
