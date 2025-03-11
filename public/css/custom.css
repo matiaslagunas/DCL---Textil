@@ -388,3 +388,73 @@ body {
 .parrafo-logos a:hover {
     background: #0056b3;
 }
+.marcas-home_contenedor {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.marcas-logos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.marca {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marca img {
+    max-width: 100%;
+    transition: all 0.5s ease;
+}
+
+.marca.expandida {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    position: relative;
+}
+
+.marca.expandida .imagen {
+    flex: 1;
+    max-width: 250px;
+    text-align: left;
+}
+
+.marca.expandida .marca-info {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.marca.expandida h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.marca.expandida p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.marca .parrafo-logos a {
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
