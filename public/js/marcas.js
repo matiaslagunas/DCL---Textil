@@ -19,33 +19,40 @@ document.addEventListener("DOMContentLoaded", () => {
     marcas.forEach(marca => {
         const link = marca.querySelector(".parrafo-logos a");
 
+        if (!link) return; // Evita errores si no hay enlace
+
         link.addEventListener("click", (e) => {
             e.preventDefault();
 
-            // Verificar si ya está expandida
+            const marcaID = marca.dataset.marca;
+            if (!infoMarcas[marcaID]) return; // Evita errores si la marca no está en infoMarcas
+
+            // Si la marca ya está expandida, la cerramos
             if (marca.classList.contains("expandida")) {
-                marca.classList.remove("expandida");
-                marca.querySelector(".marca-info").remove();
+                cerrarMarca(marca);
                 return;
             }
 
-            // Cerrar cualquier otra marca expandida
-            document.querySelectorAll(".marca.expandida").forEach(m => {
-                m.classList.remove("expandida");
-                if (m.querySelector(".marca-info")) m.querySelector(".marca-info").remove();
-            });
+            // Cerrar otras marcas antes de abrir una nueva
+            document.querySelectorAll(".marca.expandida").forEach(cerrarMarca);
 
             // Expandir la marca seleccionada
             marca.classList.add("expandida");
 
-            // Crear la info de la marca
+            // Crear el contenido dinámico
             const info = document.createElement("div");
             info.classList.add("marca-info");
             info.innerHTML = `
-                <h3>${infoMarcas[marca.dataset.marca].titulo}</h3>
-                <p>${infoMarcas[marca.dataset.marca].descripcion}</p>
+                <h3>${infoMarcas[marcaID].titulo}</h3>
+                <p>${infoMarcas[marcaID].descripcion}</p>
             `;
             marca.appendChild(info);
         });
     });
+
+    function cerrarMarca(marca) {
+        marca.classList.remove("expandida");
+        const info = marca.querySelector(".marca-info");
+        if (info) info.remove();
+    }
 });

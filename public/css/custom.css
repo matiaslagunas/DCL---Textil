@@ -458,3 +458,74 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye los elementos en el bloque */
+    height: 100%; /* Asegura que tome toda la altura disponible */
+}
+
+.texto {
+    flex-grow: 1; /* Hace que el texto ocupe todo el espacio disponible */
+}
+
+.boton {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+}
+
+
+.marcas-logos {
+    display: flex;
+    gap: 10px;
+}
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 10px); /* Tres marcas en una fila */
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.parrafo-logos {
+    margin-top: auto; /* Mantiene el botón "Ver más" siempre abajo */
+    text-align: center;
+}
+
+.marca.expandid {
+    width: 100%; /* Expande el bloque cuando se activa */
+}
+
+
+
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Espacio entre elementos */
+    width: 200px; /* Ajustalo según necesites */
+    height: 100%; /* Asegura que el contenedor tenga altura */
+    position: relative; /* Para controlar la posición de "Ver más" */
+}
+
+.marca .imagen {
+    max-width: 100%;
+}
+
+.marca .parrafo-logos {
+    margin-top: auto; /* Empuja el botón hacia el fondo */
+    position: absolute;
+    bottom: 10px; /* Lo ajusta al borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.marca-info {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
