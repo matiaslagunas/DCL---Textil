@@ -79,25 +79,20 @@
     
     
     <!-- Comentarios -->
-    <div class="comentarios-container animated">
-        <div class="comentario-izq izquierda">
-            <div readonly id="left-text">
-                <h2><b><%= comentarios[0].autor %>:</b></h2>
-                <p>"<%= comentarios[0].texto %>"</p>
-            </div>
+    <section class="contenedorComentarios animated">
+        <h3>Testimonios de Clientes o Marcas</h3>
+        <div class="contenedor1">
+            <div><img src="/images/comentario.svg" alt=""></div>
+            <div class="comentario"><h5>“Gracias a su profesionalismo y calidad, logramos cumplir con los estándares de nuestras colecciones.”</h5></div>
+            <p class="nombreComent"><b> marca</b></p>
         </div>
-        <div class="linea-separacion"></div>
-        <div class="comentarios-derecha">
-            <% for (let i = 1; i < comentarios.length; i++) { %>
-                <div class="comentario derecha" id="right-text-<%= i %>">
-                    <div class="display" readonly>
-                        <h5><b><%= comentarios[i].autor %>:</b></h2>
-                        <p>"<%= comentarios[i].texto %>"</p>
-                    </div>
-                </div>
-            <% } %>
+            
+        <div class="contenedor2">
+            <div><img src="/images/comentario.svg" alt=""></div>
+            <div class="comentario"><h5>"Gracias a su excelencia en producción y cumplimiento, logramos superar los estándares de calidad y entregar colecciones impecables."</h5></div>
+            <p class="nombreComent"><b> marca</b></p>
         </div>
-    </div>
+    </section>
 
 
     <%- include('partials/footer') %> 
