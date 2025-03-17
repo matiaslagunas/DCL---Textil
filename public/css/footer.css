@@ -1,0 +1,61 @@
+footer{
+    width: 100%;
+    height: auto;
+    padding: 3em 0;
+    background-color: #007CD5;
+    color: #fff;
+}
+
+.cont-footer-principal{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+/*imagen*/
+.img-footer{
+    width: 130px;
+    height: auto;
+}
+.img-footer img{
+    width: 130px;
+}
+
+
+
+
+/*pages*/
+.footer-pages p{
+    opacity: 64%;
+}
+
+/*location*/
+.grid-icons-footer div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.footer-contacto div img{
+    max-width: 30px;
+    height: auto;
+    opacity: 64%;
+}
+.footer-contacto p{
+    opacity: 64%;
+    margin: 0%;
+}
+
+
+
+
+.registrada{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3em 4em 0 4em;
+}
+.registrada div p{
+    font-size: 13px;
+}
