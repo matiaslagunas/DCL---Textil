@@ -1,0 +1,21 @@
+.imagenServicios{
+    background-color: blue;
+}
+.textoServicios{
+    width: 100%;
+    height: auto;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textoServicios ul li {
+    font-size: 18px;
+}
+
+
+.desplegablesSection{
+    width: 60%;
+    margin: 3em auto;
+}

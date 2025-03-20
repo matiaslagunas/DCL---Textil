@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/nosotros.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <section class="imagenNosotros">
+        <img src="/images/foto-nosotros.jpeg" alt="Nosotros">
+    </section>
+
+    <main class="contenedorNos">
+       <div class="textosNos animated">
+        <h1 class="">Nuestra Empresa</h1>
+        <p class="">Somos una compañía con experiencia en el rubro textil de más de 30 años.
+            Nos dedicamos intensivamente a<b> producir prendas de vestir, tanto marca
+            propia como producto terminado para diferentes marcas de reconocida
+            trayectoria.</b> <br><br>
+            
+            Contamos con planta de desarrollo y producción, en la que tienen lugar las
+            siguientes actividades: desarrollo de producto, moldería digital, diseños de
+            estampado, sublimado y transfer, corte de prendas, terminado, planchado,
+            etiquetado y embolsado, con control de calidad en todos los procesos.
+        </p>
+       </div>
+
+       <!-- Sección Propuesta de Valor -->
+       <section class="propuesta-de-valor_contenedor animated">
+           <div class="contenedor-titulo-propuesta">
+               <h2>Nuestros Pilares</h2>
+           </div>
+           <div class="grid-propuestaIcons animated">
+               <div class="item1_item"><img src="/images/logo1SVG.svg" alt="Medalla"></div>
+               <div class="item2_item"><img src="/images/logo2SVG.svg" alt="Escudo"></div>
+               <div class="item3_item"><img src="/images/logo3SVG.svg" alt="Mecánica"></div>
+               <div class="item4_item"><img src="/images/logo4SVG.svg" alt="Mano"></div>
+
+               <div class="item5_item">La excelencia</div>
+               <div class="item6_item">La calidad</div>
+               <div class="item7_item">PEl crecimiento sostenido</div>
+               <div class="item8_item">La eficiencia</div>
+           </div>
+       </section>
+    </main>
+
+    <%- include('partials/footer') %> 
+    <script src="/js/interacciones.js"></script>
+</body>
+</html>

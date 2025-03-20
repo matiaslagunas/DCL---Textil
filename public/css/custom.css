@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* ANIMACIONES */
 .animated {
     opacity: 0;
@@ -18,7 +23,6 @@
 /* ESTILO GENERAL */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
 }
 
 .navbar-brand img {
@@ -121,10 +125,12 @@ body {
 
 /* SECCIÓN DE PROPUESTA DE VALOR */
 .propuesta-de-valor_contenedor {
+    position: relative;
+    bottom: 10px;
     width: 100%;
     height: auto;
-    margin: 5em 0; 
-    padding: 0 15%;
+    margin: 0; 
+    padding: 5em 15%;
 }
 
 .contenedor-titulo-propuesta {
@@ -212,7 +218,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+
 }
 
 .parrafo-logos {
@@ -341,6 +347,7 @@ body {
 .marcas-home_contenedor {
     text-align: center;
     margin: 50px auto;
+    
 }
 
 .marcas-logos {
@@ -517,16 +524,22 @@ body {
 
 /* SECCIÓN COMENTARIOS */
 
-.contenedorComentarios{
+.contenedorComentarios {
     width: 100%;
     height: auto;
-    margin: 0 0 10em 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2em;
+    padding: 5em 0em 8em 0;
+    border-radius: 1em;
+    background:#fff; /* Fondo semitransparente para que se vea la imagen */
+    backdrop-filter: blur(5px); /* Difuminar la imagen para mejorar el efecto */
 }
+
+
 .contenedor1{
     margin-bottom: 2em;
 }
@@ -565,3 +578,4 @@ body {
     bottom: 5px;
     right: 25px;
 }
+

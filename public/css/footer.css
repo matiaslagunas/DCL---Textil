@@ -26,8 +26,9 @@ footer{
 
 
 /*pages*/
-.footer-pages p{
+.footer-pages a p{
     opacity: 64%;
+    color: #fff;
 }
 
 /*location*/
