@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/custom.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/mantenimiento.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=handshake" />
 </head>
 <body>
+    <div style=" padding: 2em" class="mantenimiento">
+        <h1 style="text-align: center;">Estamos en mantenimiento</h1>
+        <img src="https://pcasistencia.com/wp-content/uploads/2018/11/Soporte-y-mantenimiento-web.jpg" alt="Mantenimiento">
+      </div>
     <%- include('partials/header') %> <!-- No es necesario pasar 'title' explícitamente aquí -->
     
     <!-- Video como banner -->
-<video autoplay loop muted playsinline class="banner-video">
+<video autoplay loop muted playsinline class="banner-video contenido">
     <source src="/images/video-baner-dcl.mp4" type="video/mp4">
     Tu navegador no soporta videos.
 </video>
       
 
     <!-- Propuesta de valor -->
-    <section class="propuesta-de-valor_contenedor animated">
+    <section class="propuesta-de-valor_contenedor animated contenido">
         <div class="contenedor-titulo-propuesta">
             <h2>Propuesta de valor</h2>
         </div>
@@ -39,7 +44,7 @@
     </section>
 
     <!-- Marcas -->
-    <section class="marcas-home_contenedor animated">
+    <section class="marcas-home_contenedor animated contenido">
         <div class="titulo-subtitulo">
             <h2>Marcas que confían <br> en nosotros</h2>
             <p>Ellos creen en nuestra calidad</p>
@@ -80,7 +85,7 @@
     
     
     <!-- Comentarios -->
-    <section class="contenedorComentarios animated">
+    <section class="contenedorComentarios animated contenido">
         <h3>Testimonios de Clientes o Marcas</h3>
 
         <div id="testimonios-container">
