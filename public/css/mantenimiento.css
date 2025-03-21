@@ -1,33 +1,35 @@
-/* Contenedor de la imagen de mantenimiento */
+/* Ocultar mantenimiento por defecto */
 .mantenimiento {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #fff; /* Color de fondo opcional */
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Imagen de mantenimiento */
+.mantenimiento img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Cuando el ancho de pantalla es menor a 1200px, mostramos la pantalla de mantenimiento */
+@media (max-width: 1200px) {
+  .mantenimiento {
+      visibility: visible;
+      opacity: 1;
   }
-  
-  /* Imagen de mantenimiento (se adapta al tamaño de la pantalla) */
-  .mantenimiento img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  .contenido {
+      display: none !important;
   }
-  
-  /* Ocultar contenido normal por debajo de 1200px */
-  @media (max-width: 1200px) {
-    .mantenimiento {
-      display: flex;
-      flex-direction: column;
-    }
-    .contenido {
-      display: none;
-    }
-  }
-  
+}
