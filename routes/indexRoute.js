@@ -6,7 +6,6 @@ const comentarios = require('../marcas y demas/marcas.json')
 router.get('/', (req, res) => {
    
     res.render('index', { 
-        title: 'Somos textiles', 
         comentarios: comentarios.comentarios 
     });
 });
