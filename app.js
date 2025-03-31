@@ -8,6 +8,7 @@ const indexRoute = require('./routes/indexRoute');
 const contactoRoute = require('./routes/contactoRoute');
 const nosotrosRoute = require('./routes/nosotrosRoute');
 const serviciosRoute = require('./routes/serviciosRoute');
+const productosRoute = require('./routes/productosRoute');
 
 // Configura EJS como motor de plantillas
 app.set('view engine', 'ejs');  // Establece EJS como motor de vista
@@ -22,9 +23,10 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 
 // Rutas
 app.use('/', indexRoute);
-app.use('/Contacto', contactoRoute)
-app.use('/nosotros', nosotrosRoute)
-app.use('/servicios', serviciosRoute)
+app.use('/nosotros', nosotrosRoute);
+app.use('/servicios', serviciosRoute);
+app.use('/productos', productosRoute);
+
 
 // Inicia el servidor
 app.listen(port, () => {

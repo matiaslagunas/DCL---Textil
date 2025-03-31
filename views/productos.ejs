@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <title>Productos</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <section class="banner">
+        <img src="/images/foto-nosotros.jpeg" alt="Banner">
+    </section>
+    <main class="main">
+        
+    
+        <h2 class="titular">Productos</h2>
+        <section class="last-view">
+            <div class="producto__contenedor">
+                <% productos.forEach(producto => { %>
+                    <div class="producto">
+                        <img src="<%= producto.imagen %>" alt="<%= producto.alt %>">
+                        <div class="producto__info">
+                            <p class="precio"><%= producto.alt %></p>
+                            <p class="descuento"><%= producto.descuento %></p>
+                            <p class="descripcion"><%= producto.descripcion %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

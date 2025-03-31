@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/js/comentarios.json') // Carga los comentarios desde un JSON
+    fetch('/js/json/comentarios.json') // Carga los comentarios desde un JSON
         .then(response => response.json())
         .then(comentarios => {
             let indice = 0;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             mostrarTestimonios(); // Mostrar los primeros testimonios
-            setInterval(mostrarTestimonios, 5000); // Rotar cada 5 segundos
+            setInterval(mostrarTestimonios, 10000); // Rotar cada 10 segundos
         })
         .catch(error => console.error('Error cargando los comentarios:', error));
 });

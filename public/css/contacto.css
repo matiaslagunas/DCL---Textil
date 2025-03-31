@@ -5,7 +5,7 @@
 .contacto {
   background: linear-gradient(to bottom, #007cd5, #ffffff);
   color: white;
-  padding-top: 3em;
+  padding-top: 8em;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -46,6 +46,7 @@
 
 .redes {
   margin-top: 20px;
+  margin-bottom: 5em;
 }
 
 .redes a {

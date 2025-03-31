@@ -1,0 +1,86 @@
+[
+  {
+      "imagen": "/images/remera-blanca-1.png",
+      "alt": "Remera",
+      "precio": 1599,
+      "descuento": "30% off",
+      "descripcion": "Remera de algodón unisex"
+  },
+  {
+      "imagen": "/images/buzo-negro-5.png",
+      "alt": "Buzo",
+      "precio": 2999,
+      "descuento": "25% off",
+      "descripcion": "Buzo con capucha gris"
+  },
+  {
+      "imagen": "/images/buzo-blanco-6.png",
+      "alt": "Medio Cierre",
+      "precio": 2499,
+      "descuento": "15% off",
+      "descripcion": "Medio cierre deportivo"
+  },
+  {
+      "imagen": "/images/rompeviento-gris-7.png",
+      "alt": "Jogger",
+      "precio": 1999,
+      "descuento": "10% off",
+      "descripcion": "Pantalón jogger casual"
+  },
+  {
+      "imagen": "/images/remera-blanca-1.png",
+      "alt": "Camiseta",
+      "precio": 1299,
+      "descuento": "20% off",
+      "descripcion": "Camiseta básica de manga corta"
+  },
+  {
+      "imagen": "/images/remera-blanca-1.png",
+      "alt": "Chaqueta",
+      "precio": 4999,
+      "descuento": "40% off",
+      "descripcion": "Chaqueta impermeable con forro"
+  },
+  {
+      "imagen": "/images/remera-gris-2.png",
+      "alt": "Jeans",
+      "precio": 2699,
+      "descuento": "15% off",
+      "descripcion": "Jeans de corte clásico para hombre"
+  },
+  {
+      "imagen": "/images/chomba-roja-3.png",
+      "alt": "Sudadera",
+      "precio": 2599,
+      "descuento": "20% off",
+      "descripcion": "Sudadera unisex de felpa"
+  },
+  {
+      "imagen": "/images/chomba-gris-4.png",
+      "alt": "Pantalón",
+      "precio": 1999,
+      "descuento": "30% off",
+      "descripcion": "Pantalón de vestir slim fit"
+  },
+  {
+      "imagen": "/images/buzo-negro-5.png",
+      "alt": "Sport Jacket",
+      "precio": 3499,
+      "descuento": "25% off",
+      "descripcion": "Chaqueta deportiva ligera"
+  },
+  {
+      "imagen": "/images/buzo-blanco-6.png",
+      "alt": "Falda",
+      "precio": 1599,
+      "descuento": "35% off",
+      "descripcion": "Falda corta de algodón"
+  },
+  {
+      "imagen": "/images/rompeviento-gris-7.png",
+      "alt": "Vestido",
+      "precio": 3199,
+      "descuento": "30% off",
+      "descripcion": "Vestido de verano de lino"
+  }
+]
