@@ -23,6 +23,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 
 // Rutas
 app.use('/', indexRoute);
+app.use('/Contacto', contactoRoute)
 app.use('/nosotros', nosotrosRoute);
 app.use('/servicios', serviciosRoute);
 app.use('/productos', productosRoute);
