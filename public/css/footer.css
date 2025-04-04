@@ -1,4 +1,4 @@
-footer{
+footer {
     width: 100%;
     height: auto;
     padding: 3em 0;
@@ -6,57 +6,82 @@ footer{
     color: #fff;
 }
 
-.cont-footer-principal{
+.cont-footer-principal {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap; /* 👈 importante para responsive */
     justify-content: space-around;
+    gap: 2em;
+    padding: 0 2em;
 }
 
-
-/*imagen*/
-.img-footer{
+/* imagen */
+.img-footer {
     width: 130px;
     height: auto;
 }
-.img-footer img{
-    width: 130px;
+.img-footer img {
+    width: 100%;
 }
 
-
-
-
-/*pages*/
-.footer-pages a p{
+/* páginas */
+.footer-pages a p {
     opacity: 64%;
     color: #fff;
+    margin: 0.3em 0;
 }
 
-/*location*/
-.grid-icons-footer div{
+/* contacto */
+.grid-icons-footer div {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 1em;
 }
-.footer-contacto div img{
+.footer-contacto div img {
     max-width: 30px;
     height: auto;
     opacity: 64%;
 }
-.footer-contacto p{
+.footer-contacto p {
     opacity: 64%;
-    margin: 0%;
+    margin: 0;
 }
 
-
-
-
-.registrada{
+/* copyright */
+.registrada {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 3em 4em 0 4em;
+    padding: 3em 2em 0 2em;
 }
-.registrada div p{
+.registrada div p {
     font-size: 13px;
+}
+
+/* 🔻 MEDIA QUERIES PARA RESPONSIVE 🔻 */
+
+@media (max-width: 768px) {
+    .cont-footer-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-pages,
+    .footer-contacto,
+    .img-footer {
+        margin-bottom: 2em;
+    }
+
+    .grid-icons-footer div {
+        justify-content: center;
+    }
+
+    .registrada {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        text-align: center;
+    }
 }
