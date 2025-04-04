@@ -140,6 +140,7 @@ body {
 
 .contenedor-titulo-propuesta h2 {
     font-size: 40px;
+    margin-bottom: 1em;
 }
 
 .grid-propuestaIcons {
@@ -532,7 +533,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 4em;
     padding: 5em 0em 8em 0;
     border-radius: 1em;
     background:#fff; /* Fondo semitransparente para que se vea la imagen */
@@ -609,8 +610,13 @@ body {
   
   
 
-
-
+.img-propuesta{
+    width: 100px !important;
+    height: auto;
+}
+@media (min-width:1024px) {
+   .contenedorComentarios h2{  font-size: 40px}
+}
 @media (max-width: 1024px) {
 
     /* HEADER TRANSPARENTE */
@@ -662,7 +668,7 @@ body {
         text-align: center;
         justify-content: center;
         gap: 1em;
-        padding-bottom: 3em;
+        padding-bottom: 2em;
     }
     .contenedor1{
         margin-bottom: 2em;
