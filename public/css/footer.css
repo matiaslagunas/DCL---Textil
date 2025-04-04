@@ -26,7 +26,7 @@ footer {
 /* páginas */
 .footer-pages a p {
     opacity: 64%;
-    color: #fff;
+    color: #fff !important;
     margin: 0.3em 0;
 }
 
