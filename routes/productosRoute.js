@@ -11,4 +11,4 @@ router.get('/K-pro', (req, res) => {
    
     res.render('productos', { productos });
 });
-module.exports = router;
+module.exports = router; 

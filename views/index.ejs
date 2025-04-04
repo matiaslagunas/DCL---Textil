@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/custom.css">
         <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/mantenimiento.css">
+
         <link rel="icon" type="image/png" href="/images/DCL.png">
     
         <!-- Google Fonts / Iconos -->
@@ -30,36 +30,41 @@
     </head>
     
 <body>
-    <div style=" padding: 2em" class="mantenimiento">
-        <h1 style="text-align: center;">Estamos en mantenimiento</h1>
-        <img src="https://pcasistencia.com/wp-content/uploads/2018/11/Soporte-y-mantenimiento-web.jpg" alt="Mantenimiento">
-      </div>
+    
     <%- include('partials/header') %> <!-- No es necesario pasar 'title' explícitamente aquí -->
     
     <!-- Video como banner -->
 <video autoplay loop muted playsinline class="banner-video contenido">
     <source src="/images/video-baner-dcl.mp4" type="video/mp4">
-    Tu navegador no soporta videos.
+    Error, tu navegador no soporta videos.
 </video>
       
 
-    <!-- Propuesta de valor -->
-    <section class="propuesta-de-valor_contenedor animated contenido">
-        <div class="contenedor-titulo-propuesta">
-            <h2>Propuesta de valor</h2>
-        </div>
-        <div class="grid-propuestaIcons animated">
-            <div class="item1_item"><img src="/images/logo-medalla.svg" style="color: #007cd5"></div>
-            <div class="item2_item"><img src="/images/logo-escudo.svg" alt=""></div>
-            <div class="item3_item"><img src="/images/logo-mecanica.svg" alt=""></div>
-            <div class="item4_item"><img src="/images/logo-hand.svg" alt=""></div>
-
-            <div class="item5_item">Experiencia con <br> grandes marcas</div>
-            <div class="item6_item">Calidad <br> garantizada</div>
-            <div class="item7_item">Producción <br> personalizada</div>
-            <div class="item8_item">Cumplimiento y <br> confianza</div>
-        </div>
-    </section>
+  <!-- Propuesta de valor -->
+<section class="propuesta-de-valor_contenedor animated contenido">
+    <div class="contenedor-titulo-propuesta">
+      <h2>Propuesta de valor</h2>
+    </div>
+  
+    <div class="grid-propuestaIcons animated">
+      <div class="propuesta-item">
+        <img src="/images/logo-medalla.svg" alt="">
+        <p>Experiencia con <br> grandes marcas</p>
+      </div>
+      <div class="propuesta-item">
+        <img src="/images/logo-escudo.svg" alt="">
+        <p>Calidad <br> garantizada</p>
+      </div>
+      <div class="propuesta-item">
+        <img src="/images/logo-mecanica.svg" alt="">
+        <p>Producción <br> personalizada</p>
+      </div>
+      <div class="propuesta-item">
+        <img src="/images/logo-hand.svg" alt="">
+        <p>Cumplimiento y <br> confianza</p>
+      </div>
+    </div>
+  </section>
 
     <!-- Marcas -->
     <section class="marcas-home_contenedor animated contenido">
@@ -117,5 +122,7 @@
     <script src="/js/carrousel.js"></script>
     <script src="/js/interacciones.js"></script>
     <script src="/js/marcas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
