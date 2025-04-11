@@ -758,8 +758,15 @@ body {
 }
   
 @media (max-width: 480px) {
+    .img-propuesta{
+        width: 170px !important;
+        height: auto;
+    }
+    .propuesta-de-valor_contenedor {
+        padding: 7em 0% 0 0%;
+    }
     .grid-propuestaIcons {
-        grid-template-columns: 1fr;
+        grid-template-columns: 250px;
       }
 
     .contenedor-img1 img, .contenedor-img2 img, .contenedor-img3 img {
