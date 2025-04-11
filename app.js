@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const sitemap = require('sitemap');
 const app = express();
 const port = 3300;
@@ -13,8 +12,8 @@ const serviciosRoute = require('./routes/serviciosRoute');
 const productosRoute = require('./routes/productosRoute');
 
 // Configura EJS como motor de plantillas
-app.set('view engine', 'ejs');  // Establece EJS como motor de vista
-app.set('views', path.join(__dirname, 'views'));  // Establece el directorio de vistas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Sirve archivos estáticos desde la carpeta "public"
 app.use(express.static(path.join(__dirname, 'public')));
@@ -30,26 +29,27 @@ app.use('/nosotros', nosotrosRoute);
 app.use('/servicios', serviciosRoute);
 app.use('/productos', productosRoute);
 
-// Crear un mapa del sitemap
-const routes = [
-  '/', 
-  '/Contacto', 
-  '/nosotros', 
-  '/servicios', 
-  '/productos',
-  // Si tienes más rutas, añádelas aquí
-];
-
-const sitemapData = sitemap.createSitemap({
-  hostname: 'https://www.dcl.ar',
-  cacheTime: 600000,  // 600 sec - cache purge period
-  urls: routes.map(route => ({ url: route, changefreq: 'daily', priority: 0.7 }))
-});
-
-// Generar el archivo sitemap.xml
+// Servir el sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
-  res.header('Content-Type', 'application/xml');
-  res.send(sitemapData.toString());
+  res.setHeader('Content-Type', 'application/xml');
+
+  const sitemapStream = new sitemap.SitemapStream({ hostname: 'http://localhost:3300' });
+
+  const links = [
+    { url: '/', changefreq: 'daily', priority: 1.0 },
+    { url: '/contacto', changefreq: 'monthly', priority: 0.8 },
+    { url: '/nosotros', changefreq: 'monthly', priority: 0.8 },
+    { url: '/servicios', changefreq: 'monthly', priority: 0.8 },
+    { url: '/productos', changefreq: 'monthly', priority: 0.8 },
+    { url: '/Contacto/H-contacto', changefreq: 'monthly', priority: 0.6 },
+    { url: '/servicios/L-ser', changefreq: 'monthly', priority: 0.6 },
+    { url: '/productos/K-pro', changefreq: 'monthly', priority: 0.6 },
+    { url: '/nosotros/M-nos', changefreq: 'monthly', priority: 0.6 }
+  ];
+
+  links.forEach(link => sitemapStream.write(link));
+  sitemapStream.end();
+  sitemapStream.pipe(res);
 });
 
 // Inicia el servidor
