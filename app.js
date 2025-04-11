@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const sitemap = require('sitemap');
 const app = express();
 const port = 3300;
 
@@ -28,6 +30,27 @@ app.use('/nosotros', nosotrosRoute);
 app.use('/servicios', serviciosRoute);
 app.use('/productos', productosRoute);
 
+// Crear un mapa del sitemap
+const routes = [
+  '/', 
+  '/Contacto', 
+  '/nosotros', 
+  '/servicios', 
+  '/productos',
+  // Si tienes más rutas, añádelas aquí
+];
+
+const sitemapData = sitemap.createSitemap({
+  hostname: 'https://www.dcl.ar',
+  cacheTime: 600000,  // 600 sec - cache purge period
+  urls: routes.map(route => ({ url: route, changefreq: 'daily', priority: 0.7 }))
+});
+
+// Generar el archivo sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemapData.toString());
+});
 
 // Inicia el servidor
 app.listen(port, () => {
