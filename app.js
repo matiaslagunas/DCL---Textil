@@ -12,8 +12,8 @@ const serviciosRoute = require('./routes/serviciosRoute');
 const productosRoute = require('./routes/productosRoute');
 
 // Configura EJS como motor de plantillas
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');  // Establece EJS como motor de vista
+app.set('views', path.join(__dirname, 'views'));  // Establece el directorio de vistas
 
 // Sirve archivos estáticos desde la carpeta "public"
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,26 +29,27 @@ app.use('/nosotros', nosotrosRoute);
 app.use('/servicios', serviciosRoute);
 app.use('/productos', productosRoute);
 
-// Servir el sitemap.xml
+// Crear el sitemap
+const sitemapStream = new sitemap.SitemapStream({ hostname: 'http://localhost:3300' });
+const sitemapData = [
+  { url: '/', changefreq: 'daily', priority: 1.0 },
+  { url: '/contacto', changefreq: 'monthly', priority: 0.8 },
+  { url: '/nosotros', changefreq: 'monthly', priority: 0.8 },
+  { url: '/servicios', changefreq: 'monthly', priority: 0.8 },
+  { url: '/productos', changefreq: 'monthly', priority: 0.8 },
+  { url: '/Contacto/H-contacto', changefreq: 'monthly', priority: 0.6 },
+  { url: '/servicios/L-ser', changefreq: 'monthly', priority: 0.6 },
+  { url: '/productos/K-pro', changefreq: 'monthly', priority: 0.6 },
+  { url: '/nosotros/M-nos', changefreq: 'monthly', priority: 0.6 }
+];
+
+// Escribir en el sitemap
+sitemapStream.write(sitemapData);
+sitemapStream.end();
+
+// Servir el archivo sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
-  res.setHeader('Content-Type', 'application/xml');
-
-  const sitemapStream = new sitemap.SitemapStream({ hostname: 'http://localhost:3300' });
-
-  const links = [
-    { url: '/', changefreq: 'daily', priority: 1.0 },
-    { url: '/contacto', changefreq: 'monthly', priority: 0.8 },
-    { url: '/nosotros', changefreq: 'monthly', priority: 0.8 },
-    { url: '/servicios', changefreq: 'monthly', priority: 0.8 },
-    { url: '/productos', changefreq: 'monthly', priority: 0.8 },
-    { url: '/Contacto/H-contacto', changefreq: 'monthly', priority: 0.6 },
-    { url: '/servicios/L-ser', changefreq: 'monthly', priority: 0.6 },
-    { url: '/productos/K-pro', changefreq: 'monthly', priority: 0.6 },
-    { url: '/nosotros/M-nos', changefreq: 'monthly', priority: 0.6 }
-  ];
-
-  links.forEach(link => sitemapStream.write(link));
-  sitemapStream.end();
+  res.header('Content-Type', 'application/xml');
   sitemapStream.pipe(res);
 });
 
