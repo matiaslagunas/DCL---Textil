@@ -31,20 +31,31 @@ app.use('/productos', productosRoute);
 
 // Crear el sitemap
 const sitemapStream = new sitemap.SitemapStream({ hostname: 'http://localhost:3300' });
+
+// Rutas estáticas
 const sitemapData = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/contacto', changefreq: 'monthly', priority: 0.8 },
   { url: '/nosotros', changefreq: 'monthly', priority: 0.8 },
   { url: '/servicios', changefreq: 'monthly', priority: 0.8 },
-  { url: '/productos', changefreq: 'monthly', priority: 0.8 },
+  { url: '/productos', changefreq: 'monthly', priority: 0.8 }
+];
+
+// Rutas dinámicas (se pueden agregar otras dinámicamente si las necesitas)
+const dynamicRoutes = [
   { url: '/Contacto/H-contacto', changefreq: 'monthly', priority: 0.6 },
   { url: '/servicios/L-ser', changefreq: 'monthly', priority: 0.6 },
   { url: '/productos/K-pro', changefreq: 'monthly', priority: 0.6 },
   { url: '/nosotros/M-nos', changefreq: 'monthly', priority: 0.6 }
 ];
 
+// Combina las rutas estáticas y dinámicas
+const allRoutes = [...sitemapData, ...dynamicRoutes];
+
 // Escribir en el sitemap
-sitemapStream.write(sitemapData);
+allRoutes.forEach(route => {
+  sitemapStream.write(route);
+});
 sitemapStream.end();
 
 // Servir el archivo sitemap.xml
