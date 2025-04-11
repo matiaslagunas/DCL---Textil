@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const sitemap = require('sitemap');
+const { SitemapStream } = require('sitemap');  // No hace falta streamToPromise
 const app = express();
 const port = 3300;
 
@@ -30,26 +30,28 @@ app.use('/nosotros', nosotrosRoute);
 app.use('/servicios', serviciosRoute);
 app.use('/productos', productosRoute);
 
-// Crear un mapa del sitemap
-const routes = [
-  '/', 
-  '/Contacto', 
-  '/nosotros', 
-  '/servicios', 
-  '/productos',
-  // Si tienes más rutas, añádelas aquí
+// Crear el sitemap
+const sitemapStream = new SitemapStream({ hostname: 'http://localhost:3300' });
+const sitemapData = [
+  { url: '/', changefreq: 'daily', priority: 1.0 },
+  { url: '/contacto', changefreq: 'monthly', priority: 0.8 },
+  { url: '/nosotros', changefreq: 'monthly', priority: 0.8 },
+  { url: '/servicios', changefreq: 'monthly', priority: 0.8 },
+  { url: '/productos', changefreq: 'monthly', priority: 0.8 },
+  { url: '/Contacto/H-contacto', changefreq: 'monthly', priority: 0.6 },
+  { url: '/servicios/L-ser', changefreq: 'monthly', priority: 0.6 },
+  { url: '/productos/K-pro', changefreq: 'monthly', priority: 0.6 },
+  { url: '/nosotros/M-nos', changefreq: 'monthly', priority: 0.6 }
 ];
 
-const sitemapData = sitemap.createSitemap({
-  hostname: 'https://www.dcl.ar',
-  cacheTime: 600000,  // 600 sec - cache purge period
-  urls: routes.map(route => ({ url: route, changefreq: 'daily', priority: 0.7 }))
-});
+// Escribir en el sitemap
+sitemapData.forEach(url => sitemapStream.write(url));
+sitemapStream.end();
 
-// Generar el archivo sitemap.xml
+// Servir el archivo sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
   res.header('Content-Type', 'application/xml');
-  res.send(sitemapData.toString());
+  sitemapStream.pipe(res);
 });
 
 // Inicia el servidor
