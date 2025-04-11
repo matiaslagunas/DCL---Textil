@@ -24,7 +24,7 @@
 }
 
 /* Cuando el ancho de pantalla es menor a 1200px, mostramos la pantalla de mantenimiento */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .mantenimiento {
       visibility: visible;
       opacity: 1;
