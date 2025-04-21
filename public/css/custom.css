@@ -817,8 +817,10 @@ body {
 
 /* Estilo básico de cada marca */
 .marca {
-    display: flex;
+    flex: 0 0 270px; /* Fijo para las marcas no expandidas */
+    transition: all 0.3s ease;
     flex-direction: column;
+    flex: 1fr;
     align-items: center;
     justify-content: space-between;
     width: 270px; /* Ancho por defecto */
@@ -853,6 +855,7 @@ body {
     justify-content: flex-start;
     padding: 20px;
     width: 100%; /* Ocupar el 100% del ancho */
+    flex: 1 1 100%;
 }
 
 .marca.expandida .imagen {
@@ -874,4 +877,26 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+.ver-boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: transparent;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .ver-boton:hover {
+    color: #007cd5;
+  }
+  .marca .imagen img {
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }

@@ -7,20 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let indice = 0;
     const cantidadVisible = 3;
 
-    // Cargar el archivo JSON con las marcas
     fetch("/js/json/marcas.json")
         .then(res => res.json())
         .then(data => {
-            marcas = Object.entries(data); // Convertir el objeto a array de [clave, valor]
+            marcas = Object.entries(data);
             mostrarMarcas();
         })
         .catch(err => console.error("Error al cargar JSON:", err));
 
-    // Mostrar marcas en el contenedor
     function mostrarMarcas() {
-        contenedor.innerHTML = ""; // Limpiar el contenedor
+        contenedor.innerHTML = "";
 
-        const visibles = marcas.slice(indice, indice + cantidadVisible); // Obtener las marcas visibles
+        const visibles = marcas.slice(indice, indice + cantidadVisible);
 
         visibles.forEach(([clave, marca]) => {
             const div = document.createElement("div");
@@ -30,64 +28,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="imagen">
                     <img src="${marca.image}" alt="${marca.titulo}" style="width: 100%;">
                 </div>
-                <p class="parrafo-logos">
-                    <a href="#" data-marca="${clave}">Ver más</a>
-                </p>
                 <div class="marca-info">
                     <h3>${marca.titulo}</h3>
                     <p>${marca.descripcion}</p>
-                    <button class="ver-menos" style="display: none;">Ver menos</button>
+                    <a href="#" class="ver-boton ver-menos" style="display: none;">Ver menos</a>
                 </div>
+                <a href="#" class="ver-boton ver-mas">Ver más</a>
             `;
             contenedor.appendChild(div);
         });
 
-        // Añadir el evento para expandir y contraer
-        const verMasLinks = document.querySelectorAll(".parrafo-logos a");
-        verMasLinks.forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault(); // Evitar que se recargue la página
+        // Evento "Ver más"
+        const verMasBotones = contenedor.querySelectorAll(".ver-mas");
+        verMasBotones.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const marcaDiv = e.target.closest(".marca");
 
-                const marcaDiv = e.target.closest(".marca"); // Obtener el contenedor de la marca
-                const verMasBtn = marcaDiv.querySelector(".parrafo-logos a");
-                const verMenosBtn = marcaDiv.querySelector(".marca-info .ver-menos");
+                // Contraer todas primero
+                contenedor.querySelectorAll(".marca").forEach(div => {
+                    div.classList.remove("expandida");
+                    div.querySelector(".ver-mas").style.display = "inline-block";
+                    div.querySelector(".ver-menos").style.display = "none";
+                });
 
-                marcaDiv.classList.toggle("expandida"); // Alternar la clase expandida
-
-                // Mostrar/ocultar botones
-                if (marcaDiv.classList.contains("expandida")) {
-                    verMasBtn.style.display = "none";
-                    verMenosBtn.style.display = "inline-block";
-                } else {
-                    verMasBtn.style.display = "inline-block";
-                    verMenosBtn.style.display = "none";
-                }
+                // Expandir la seleccionada
+                marcaDiv.classList.add("expandida");
+                marcaDiv.querySelector(".ver-mas").style.display = "none";
+                marcaDiv.querySelector(".ver-menos").style.display = "inline-block";
             });
         });
 
-        // Añadir el evento para "Ver menos"
-        const verMenosBtns = document.querySelectorAll(".ver-menos");
-        verMenosBtns.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                const marcaDiv = e.target.closest(".marca"); // Obtener el contenedor de la marca
-                const verMasBtn = marcaDiv.querySelector(".parrafo-logos a");
-                const verMenosBtn = marcaDiv.querySelector(".marca-info .ver-menos");
-
-                marcaDiv.classList.toggle("expandida"); // Alternar la clase expandida
-
-                // Mostrar/ocultar botones
-                if (marcaDiv.classList.contains("expandida")) {
-                    verMasBtn.style.display = "none";
-                    verMenosBtn.style.display = "inline-block";
-                } else {
-                    verMasBtn.style.display = "inline-block";
-                    verMenosBtn.style.display = "none";
-                }
+        // Evento "Ver menos"
+        const verMenosBotones = contenedor.querySelectorAll(".ver-menos");
+        verMenosBotones.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const marcaDiv = e.target.closest(".marca");
+                marcaDiv.classList.remove("expandida");
+                marcaDiv.querySelector(".ver-mas").style.display = "inline-block";
+                marcaDiv.querySelector(".ver-menos").style.display = "none";
             });
         });
     }
 
-    // Mover al siguiente conjunto de marcas
     btnDerecha.addEventListener("click", () => {
         if (indice + cantidadVisible < marcas.length) {
             indice++;
@@ -95,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Mover al conjunto anterior de marcas
     btnIzquierda.addEventListener("click", () => {
         if (indice > 0) {
             indice--;
