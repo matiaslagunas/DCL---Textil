@@ -1,58 +1,105 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const marcas = document.querySelectorAll(".marca");
+    const contenedor = document.getElementById("marcas-contenedor");
+    const btnIzquierda = document.getElementById("flecha-izquierda");
+    const btnDerecha = document.getElementById("flecha-derecha");
 
-    const infoMarcas = {
-        "puma": {
-            titulo: "PUMA",
-            descripcion: "Puma es sinónimo de innovación y alto rendimiento. En DCL+ trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños vanguardistas."
-        },
-        "head": {
-            titulo: "HEAD",
-            descripcion: "HEAD es una marca líder en el mundo del deporte, reconocida por su innovación y calidad. En DCL+, desarrollamos indumentaria técnica que combina diseño, confort y alto rendimiento."
-        },
-        "reef": {
-            titulo: "REEF",
-            descripcion: "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
-        }
-    };
+    let marcas = [];
+    let indice = 0;
+    const cantidadVisible = 3;
 
-    marcas.forEach(marca => {
-        const link = marca.querySelector(".parrafo-logos a");
+    // Cargar el archivo JSON con las marcas
+    fetch("/js/json/marcas.json")
+        .then(res => res.json())
+        .then(data => {
+            marcas = Object.entries(data); // Convertir el objeto a array de [clave, valor]
+            mostrarMarcas();
+        })
+        .catch(err => console.error("Error al cargar JSON:", err));
 
-        if (!link) return; // Evita errores si no hay enlace
+    // Mostrar marcas en el contenedor
+    function mostrarMarcas() {
+        contenedor.innerHTML = ""; // Limpiar el contenedor
 
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
+        const visibles = marcas.slice(indice, indice + cantidadVisible); // Obtener las marcas visibles
 
-            const marcaID = marca.dataset.marca;
-            if (!infoMarcas[marcaID]) return; // Evita errores si la marca no está en infoMarcas
-
-            // Si la marca ya está expandida, la cerramos
-            if (marca.classList.contains("expandida")) {
-                cerrarMarca(marca);
-                return;
-            }
-
-            // Cerrar otras marcas antes de abrir una nueva
-            document.querySelectorAll(".marca.expandida").forEach(cerrarMarca);
-
-            // Expandir la marca seleccionada
-            marca.classList.add("expandida");
-
-            // Crear el contenido dinámico
-            const info = document.createElement("div");
-            info.classList.add("marca-info");
-            info.innerHTML = `
-                <h3>${infoMarcas[marcaID].titulo}</h3>
-                <p>${infoMarcas[marcaID].descripcion}</p>
+        visibles.forEach(([clave, marca]) => {
+            const div = document.createElement("div");
+            div.classList.add("marca");
+            div.setAttribute("data-marca", clave);
+            div.innerHTML = `
+                <div class="imagen">
+                    <img src="${marca.image}" alt="${marca.titulo}" style="width: 100%;">
+                </div>
+                <p class="parrafo-logos">
+                    <a href="#" data-marca="${clave}">Ver más</a>
+                </p>
+                <div class="marca-info">
+                    <h3>${marca.titulo}</h3>
+                    <p>${marca.descripcion}</p>
+                    <button class="ver-menos" style="display: none;">Ver menos</button>
+                </div>
             `;
-            marca.appendChild(info);
+            contenedor.appendChild(div);
         });
+
+        // Añadir el evento para expandir y contraer
+        const verMasLinks = document.querySelectorAll(".parrafo-logos a");
+        verMasLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault(); // Evitar que se recargue la página
+
+                const marcaDiv = e.target.closest(".marca"); // Obtener el contenedor de la marca
+                const verMasBtn = marcaDiv.querySelector(".parrafo-logos a");
+                const verMenosBtn = marcaDiv.querySelector(".marca-info .ver-menos");
+
+                marcaDiv.classList.toggle("expandida"); // Alternar la clase expandida
+
+                // Mostrar/ocultar botones
+                if (marcaDiv.classList.contains("expandida")) {
+                    verMasBtn.style.display = "none";
+                    verMenosBtn.style.display = "inline-block";
+                } else {
+                    verMasBtn.style.display = "inline-block";
+                    verMenosBtn.style.display = "none";
+                }
+            });
+        });
+
+        // Añadir el evento para "Ver menos"
+        const verMenosBtns = document.querySelectorAll(".ver-menos");
+        verMenosBtns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const marcaDiv = e.target.closest(".marca"); // Obtener el contenedor de la marca
+                const verMasBtn = marcaDiv.querySelector(".parrafo-logos a");
+                const verMenosBtn = marcaDiv.querySelector(".marca-info .ver-menos");
+
+                marcaDiv.classList.toggle("expandida"); // Alternar la clase expandida
+
+                // Mostrar/ocultar botones
+                if (marcaDiv.classList.contains("expandida")) {
+                    verMasBtn.style.display = "none";
+                    verMenosBtn.style.display = "inline-block";
+                } else {
+                    verMasBtn.style.display = "inline-block";
+                    verMenosBtn.style.display = "none";
+                }
+            });
+        });
+    }
+
+    // Mover al siguiente conjunto de marcas
+    btnDerecha.addEventListener("click", () => {
+        if (indice + cantidadVisible < marcas.length) {
+            indice++;
+            mostrarMarcas();
+        }
     });
 
-    function cerrarMarca(marca) {
-        marca.classList.remove("expandida");
-        const info = marca.querySelector(".marca-info");
-        if (info) info.remove();
-    }
+    // Mover al conjunto anterior de marcas
+    btnIzquierda.addEventListener("click", () => {
+        if (indice > 0) {
+            indice--;
+            mostrarMarcas();
+        }
+    });
 });

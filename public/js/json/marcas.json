@@ -1,0 +1,47 @@
+{
+    "puma": {
+        "image": "images/Logo Puma transparente.fw (1).png",
+        "titulo": "PUMA",
+        "descripcion": "Puma es sinónimo de innovación y alto rendimiento. En DCL+ trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños vanguardistas."
+    },
+    "head": {
+        "image": "images/head-logo-png-transparent (1).png",
+        "titulo": "HEAD",
+        "descripcion": "HEAD es una marca líder en el mundo del deporte, reconocida por su innovación y calidad. En DCL+, desarrollamos indumentaria técnica que combina diseño, confort y alto rendimiento."
+    },
+    "reef": {
+        "image": "images/Logo Reef - Transparente.fw.png",
+        "titulo": "REEF",
+        "descripcion": "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
+    },
+    "nike": {
+        "image": "images/Logo Puma transparente.fw (1).png",
+        "titulo": "NIKE",
+        "descripcion": "Nike es un líder global en ropa y calzado deportivo. En DCL+, nos inspira a crear productos innovadores que ayuden a los atletas a alcanzar su máximo rendimiento."
+    },
+    "adidas": {
+        "image": "images/Logo Puma transparente.fw (1).png",
+        "titulo": "ADIDAS",
+        "descripcion": "Adidas es sinónimo de tecnología avanzada en ropa deportiva. Colaboramos con esta marca para desarrollar productos que combinan estilo y rendimiento."
+    },
+    "underArmour": {
+        "image": "images/Logo Puma transparente.fw (1).png",
+        "titulo": "UNDER ARMOUR",
+        "descripcion": "Under Armour es famosa por su ropa deportiva de alto rendimiento. En DCL+, trabajamos para crear indumentaria que ofrece confort y soporte para los atletas."
+    },
+    "vans": {
+        "image": "images/Logo Puma transparente.fw (1).png",
+        "titulo": "VANS",
+        "descripcion": "Vans es la marca elegida por los fanáticos de los deportes extremos y la moda urbana. En DCL+, diseñamos ropa y calzado que reflejan su estilo único."
+    },
+    "newBalance": {
+        "image": "images/newbalance-logo.png",
+        "titulo": "NEW BALANCE",
+        "descripcion": "New Balance es una marca que combina innovación tecnológica con estilo clásico. En DCL+, creamos productos deportivos con un enfoque en comodidad y rendimiento."
+    },
+    "asics": {
+        "image": "images/asics-logo.png",
+        "titulo": "ASICS",
+        "descripcion": "ASICS es una marca de renombre mundial en el ámbito del running y el deporte. En DCL+, colaboramos para desarrollar calzado y ropa de alto rendimiento para atletas."
+    }
+}

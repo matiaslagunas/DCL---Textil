@@ -219,7 +219,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .parrafo-logos {
@@ -236,10 +235,6 @@ body {
     height: auto;
     margin-top: 6em;
 }
-
-
-
-
 
 /* Asegurar que el título general siempre esté arriba */
 .titulo-subtitulo {
@@ -277,10 +272,7 @@ body {
     width: 100%;
 }
 
-
-
-
-/* Contenedor general */
+/* Ajuste del contenedor de las marcas */
 .marcas-home_contenedor {
     text-align: center;
 }
@@ -331,6 +323,7 @@ body {
 .parrafo-logos{
     color: #000;
 }
+
 .parrafo-logos a {
     display: inline-block;
     margin-top: 10px;
@@ -345,10 +338,10 @@ body {
 .parrafo-logos a:hover {
     color: #007cd5;
 }
+
 .marcas-home_contenedor {
     text-align: center;
     margin: 50px auto;
-    
 }
 
 .marcas-logos {
@@ -358,6 +351,7 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Ajuste de la marca */
 .marca {
     flex: 1;
     background: #f5f5f5;
@@ -376,12 +370,12 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Estilos de la marca expandida */
 .marca.expandida {
-    flex: 3;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; /* Coloca la imagen a la izquierda y el contenido a la derecha */
     justify-content: flex-start;
+    align-items: center;
     padding: 40px;
     position: relative;
 }
@@ -389,7 +383,7 @@ body {
 .marca.expandida .imagen {
     flex: 1;
     max-width: 250px;
-    text-align: left;
+    margin-right: 20px; /* Separar la imagen del contenido */
 }
 
 .marca.expandida .marca-info {
@@ -411,7 +405,6 @@ body {
 .marca .parrafo-logos a {
     display: inline-block;
     margin-top: 10px;
-
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
@@ -431,7 +424,6 @@ body {
 .boton {
     margin-top: auto; /* Empuja el botón hacia la parte inferior */
 }
-
 
 .marcas-logos {
     display: flex;
@@ -459,31 +451,28 @@ body {
     position: relative;
 }
 
-
-
 .marca {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-between; /* Asegura que el contenido se distribuya */
-    width: 270px important!; /* Ancho más angosto por defecto */
+    width: 270px; /* Ancho más angosto por defecto */
     height: 400px; /* Mantiene la altura fija */
     padding: 20px;
     border: 1px solid #ddd;
-    
     position: relative;
-
 }
-
 
 .marca .imagen {
     max-width: 100%;
     height: auto;
 }
+
 .imagen img {
     margin-top: 5em;
 }
+
 .marca .parrafo-logos {
     width: 100%;
     position: absolute;
@@ -498,6 +487,7 @@ body {
     background-color: #f5f5f5;
     border-radius: 5px;
 }
+
 .marcas-logos {
     display: flex;
     justify-content: space-around;
@@ -507,7 +497,7 @@ body {
     margin: 0 auto;
 }
 
-
+/* Estilos específicos para la imagen expandida */
 .marca.expandida .imagen {
     flex: 1;
     max-width: 250px;
@@ -516,6 +506,7 @@ body {
     justify-content: center;
     align-items: center; /* Centra la imagen en el contenedor */
 }
+
 .marca.expandida .imagen img {
     margin: 0 !important; /* Elimina cualquier margen */
     max-height: 100%; /* Asegura que la imagen se ajuste al contenedor */
@@ -795,4 +786,92 @@ body {
         font-size: 14px;
         padding: 10px 0;
     }
+}
+
+/* Estilos para la sección de marcas */
+.marcas-home_contenedor {
+    text-align: center;
+}
+
+.titulo-subtitulo h2 {
+    font-size: 50px;
+}
+
+.titulo-subtitulo p {
+    font-size: 20px;
+}
+
+.marcas-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.marcas-logos {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Estilo básico de cada marca */
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px; /* Ancho por defecto */
+    height: 400px; /* Altura fija */
+    padding: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Imagen y contenido inicial */
+.marca .imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+.marca-info {
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+}
+
+.marca .parrafo-logos a {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Estilo cuando la marca está expandida */
+.marca.expandida {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%; /* Ocupar el 100% del ancho */
+}
+
+.marca.expandida .imagen {
+    max-width: 250px; /* Limitar el tamaño de la imagen */
+    margin-right: 20px; /* Separar la imagen del contenido */
+}
+
+.marca.expandida .marca-info {
+    display: block; /* Mostrar el contenido de la marca */
+}
+
+.marca.expandida .parrafo-logos {
+    display: none; /* Ocultar el botón de "Ver más" */
+}
+
+/* Controles de navegación */
+.flecha {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
