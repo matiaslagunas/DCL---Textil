@@ -794,7 +794,8 @@ body {
 }
 
 .titulo-subtitulo h2 {
-    font-size: 50px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .titulo-subtitulo p {
@@ -817,7 +818,7 @@ body {
 
 /* Estilo básico de cada marca */
 .marca {
-    flex: 0 0 270px; /* Fijo para las marcas no expandidas */
+    flex: 1fr 1fr 1fr; /* Fijo para las marcas no expandidas */
     transition: all 0.3s ease;
     flex-direction: column;
     flex: 1fr;
@@ -854,8 +855,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    width: 100%; /* Ocupar el 100% del ancho */
-    flex: 1 1 100%;
+    width: 300px; /* Ocupar el 100% del ancho */
+    flex: 1 1 330px;
 }
 
 .marca.expandida .imagen {
