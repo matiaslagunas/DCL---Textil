@@ -769,11 +769,28 @@ body {
     .contenedor-img1 img, .contenedor-img2 img, .contenedor-img3 img {
         width: 100%;
     }
-
+    .marcas-navegacion{
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    }
     .marca {
         width: 100%;
         padding-bottom: 6em;
+        justify-content: space-between;
+        height:700px;
     }
+    .marca.expandida{
+        height: 600px;
+        padding: 2em auto;
+    }
+    .marca.expandida .marca-info p{
+        padding-bottom: 2em;
+    }
+    .marcas-logos{
+        padding: 0;
+    }
+    .imagen img {padding-bottom: 3em;}
 
     .contenedor1 div img, .contenedor2 div img {
         width: 50px;
