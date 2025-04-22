@@ -31,9 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="marca-info">
                     <h3>${marca.titulo}</h3>
                     <p>${marca.descripcion}</p>
+                </div>
+                <div class="botones-container">
+                    <a href="#" class="ver-boton ver-mas">Ver más</a>
                     <a href="#" class="ver-boton ver-menos" style="display: none;">Ver menos</a>
                 </div>
-                <a href="#" class="ver-boton ver-mas">Ver más</a>
             `;
             contenedor.appendChild(div);
         });
