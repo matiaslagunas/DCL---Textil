@@ -14,20 +14,20 @@
         "titulo": "REEF",
         "descripcion": "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
     },
-    "nike": {
+    "puma2": {
         "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "NIKE",
-        "descripcion": "Nike es un líder global en ropa y calzado deportivo. En DCL+, nos inspira a crear productos innovadores que ayuden a los atletas a alcanzar su máximo rendimiento."
+        "titulo": "PUMA",
+        "descripcion": "Puma es sinónimo de innovación y alto rendimiento. En DCL+ trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños vanguardistas."
     },
-    "adidas": {
-        "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "ADIDAS",
-        "descripcion": "Adidas es sinónimo de tecnología avanzada en ropa deportiva. Colaboramos con esta marca para desarrollar productos que combinan estilo y rendimiento."
+    "head2": {
+        "image": "images/head-logo-png-transparent (1).png",
+        "titulo": "HEAD",
+        "descripcion": "HEAD es una marca líder en el mundo del deporte, reconocida por su innovación y calidad. En DCL+, desarrollamos indumentaria técnica que combina diseño, confort y alto rendimiento."
     },
-    "underArmour": {
-        "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "UNDER ARMOUR",
-        "descripcion": "Under Armour es famosa por su ropa deportiva de alto rendimiento. En DCL+, trabajamos para crear indumentaria que ofrece confort y soporte para los atletas."
+    "reef2": {
+        "image": "images/Logo Reef - Transparente.fw.png",
+        "titulo": "REEF",
+        "descripcion": "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
     },
     "vans": {
         "image": "images/Logo Puma transparente.fw (1).png",

@@ -772,6 +772,7 @@ body {
 
     .marca {
         width: 100%;
+        padding-bottom: 6em;
     }
 
     .contenedor1 div img, .contenedor2 div img {
