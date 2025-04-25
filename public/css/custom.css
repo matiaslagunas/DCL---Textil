@@ -42,7 +42,7 @@ body {
 
 /* HEADER TRANSPARENTE */
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: #b2d5ee;
@@ -524,7 +524,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: -4em;
     padding: 5em 0em 8em 0;
     border-radius: 1em;
     background:#fff; /* Fondo semitransparente para que se vea la imagen */
@@ -536,8 +536,8 @@ body {
     margin-bottom: 2em;
 }
 .contenedor1, .contenedor2{
-    width: 800px;
-    height: auto;
+    width: 600px;
+    height: 300px;
     padding: 10px;
     background-color: #b3d0e4;
     border-radius: 1em;
@@ -548,21 +548,29 @@ body {
 
     
 }
+.contenedor1 .comentario, .contenedor2 .comentario{
+    width: 100%;
+    height: auto;
+}
 .contenedor1  div img, .contenedor2 div img{
     color: #007cd5;
     width: 70px;
     height: auto;
 }
 .contenedor1 {
-    right: 4em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    right: 12em;
+    top: 3em;
     position: relative;
 }
 .contenedor2 {
-    left: 4em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    bottom: 3em;
+    left: 12em;
     position: relative;
 }
 .contenedor1  div h5, .contenedor2 div h5{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .nombreComent{
