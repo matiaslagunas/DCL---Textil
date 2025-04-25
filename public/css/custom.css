@@ -818,6 +818,16 @@ body {
         font-size: 14px;
         padding: 10px 0;
     }
+    .contenedor1 {
+        position: initial;
+        top: 0em;
+        height: auto;
+    }
+    .contenedor2 {
+        bottom: 0em;
+        position: initial;
+        height: auto;
+    }
 }
 
 /* Estilos para la sección de marcas */
