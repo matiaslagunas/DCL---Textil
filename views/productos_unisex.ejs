@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productos-generico.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="titulo">
+        <h5>
+            <a href="/productos/Hombres">Hombres</a> - 
+            <a href="/productos/Mujeres">Mujeres</a> - 
+            <a href="/productos/Ninios">Niños</a> - 
+            <a class="<%= (pagina === 'unisex') ? 'activo' : '' %>" href="/productos/Unisex">Unisex</a>
+          </h5>
+          
+        <a href="/productos">< Volver</a>
+        <h2 class="productos-titulo">Indumentaria Unisex</h2>
+    </div>
+    <section class="productos-scroll">
+      <div class="productos-container">
+        <% productos.forEach((producto, index) => { %>
+          <a href="#" class="link-producto" data-index="<%= index %>">
+            <div class="producto">
+              <img src="/<%= producto.image %>" alt="<%= producto.titulo %>">
+              <div class="info">
+                <h4><%= producto.titulo %></h4>
+                <p><%= producto.descripcion %></p>
+              </div>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </section>
+    <!-- Modal -->
+<div id="modal-producto" class="modal oculto">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <img id="modal-imagen" src="" alt="" style="width: 200px; background: #eee;" />
+      <div>
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-marca"></p>
+        <p id="modal-descripcion"></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+      const productos = <%- JSON.stringify(productos) %>;
+    
+      document.querySelectorAll('.link-producto').forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault(); // Para que no recargue la página al hacer clic
+    
+          const prod = productos[index];
+          document.getElementById('modal-imagen').src = '/' + prod.image;
+          document.getElementById('modal-titulo').textContent = prod.titulo;
+          document.getElementById('modal-marca').textContent = prod.descripcion;
+          document.getElementById('modal-descripcion').textContent = "Breve descripción";
+          document.getElementById('modal-producto').classList.remove('oculto');
+        });
+      });
+    
+      document.querySelector('.modal .cerrar').addEventListener('click', () => {
+        document.getElementById('modal-producto').classList.add('oculto');
+      });
+    </script>
+    
+    <%- include('partials/footer') %>
+</body>
+</html>
