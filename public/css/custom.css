@@ -576,7 +576,7 @@ body {
 .nombreComent{
     position: absolute;
     bottom: 5px;
-    right: 25px;
+    left: 25px;
 }
 .contenedor-titulo-propuesta{
     margin-top: 2em;
@@ -622,6 +622,27 @@ body {
     margin-top: 0;
    }
 }
+@media (max-width: 1400px) { 
+        .contenedor1, .contenedor2{
+    width: 400px;
+    height: 225px;
+}
+.contenedor1  div h5, .contenedor2 div h5{
+    font-size: 16px;
+}
+.contenedor1 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    right: 10em;
+    top: 3em;
+    position: relative;
+}
+.contenedor2 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    bottom: 3em;
+    left: 10em;
+    position: relative;
+}
+}
 @media (max-width: 1024px) {
 
     /* HEADER TRANSPARENTE */
@@ -663,7 +684,22 @@ body {
     .marca {
         width: 45%;
     }
+/* SECCIÓN COMENTARIOS */
 
+.contenedorComentarios {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14em;
+    padding: 5em 0em 8em 0;
+    border-radius: 1em;
+    background:#fff; /* Fondo semitransparente para que se vea la imagen */
+    backdrop-filter: blur(5px); /* Difuminar la imagen para mejorar el efecto */
+}
     .contenedor1, .contenedor2 {
         margin: 0 auto;
         left: 0;
@@ -676,7 +712,7 @@ body {
         padding-bottom: 2em;
     }
     .contenedor1{
-        margin-bottom: 2em;
+        margin-bottom: 4em;
     }
 
     .contenedor1 div img, .contenedor2 div img {

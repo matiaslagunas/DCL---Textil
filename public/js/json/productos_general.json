@@ -1,0 +1,37 @@
+{
+  "producto1": {
+    "image": "images/buzo-blanco-6.png",
+    "titulo": "Buzo Canguro",
+    "descripcion": "REEF"
+  },
+  "producto2": {
+    "image": "images/buzo-negro-5.png",
+    "titulo": "Campera Deportiva",
+    "descripcion": "PUMA"
+  },
+  "producto3": {
+    "image": "images/buzo-blanco-6.png",
+    "titulo": "Remera Oversize",
+    "descripcion": "NIKE"
+  },
+  "producto4": {
+    "image": "images/buzo-negro-5.png",
+    "titulo": "Pantalón Jogger",
+    "descripcion": "ADIDAS"
+  },
+  "producto5": {
+    "image": "images/buzo-blanco-6.png",
+    "titulo": "Short Deportivo",
+    "descripcion": "REEF"
+  },
+  "producto6": {
+    "image": "images/buzo-negro-5.png",
+    "titulo": "Campera Rompeviento",
+    "descripcion": "PUMA"
+  },
+  "producto7": {
+    "image": "images/buzo-blanco-6.png",
+    "titulo": "Buzo Hoodie",
+    "descripcion": "NIKE"
+  }
+}

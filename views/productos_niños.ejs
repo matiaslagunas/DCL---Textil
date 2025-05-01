@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productos-generico.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="titulo">
+        <h5>
+            <a href="/productos/Hombres">Hombres</a> - 
+            <a href="/productos/Mujeres">Mujeres</a> - 
+            <a class="<%= (pagina === 'ninios') ? 'activo' : '' %>" href="/productos/Ninios">Niños</a> - 
+            <a href="/productos/Unisex">Unisex</a>
+          </h5>
+          
+        <a href="/productos">< Volver</a>
+        <h2 class="productos-titulo">Indumentaria Niños</h2>
+    </div>
+    <section class="productos-scroll">
+        <div class="productos-container">
+          <% productos.forEach(producto => { %>
+            <div class="producto">
+              <img src="/<%= producto.image %>" alt="<%= producto.titulo %>">
+              <div class="info">
+                <h4><%= producto.titulo %></h4>
+                <p><%= producto.descripcion %></p>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+    </section>
+    <%- include('partials/footer') %>
+</body>
+</html>
