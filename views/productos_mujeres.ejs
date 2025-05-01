@@ -52,26 +52,6 @@
     </div>
   </div>
 </div>
-    <script>
-      const productos = <%- JSON.stringify(productos) %>;
-    
-      document.querySelectorAll('.link-producto').forEach((link, index) => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault(); // Para que no recargue la página al hacer clic
-    
-          const prod = productos[index];
-          document.getElementById('modal-imagen').src = '/' + prod.image;
-          document.getElementById('modal-titulo').textContent = prod.titulo;
-          document.getElementById('modal-marca').textContent = prod.descripcion;
-          document.getElementById('modal-descripcion').textContent = "Breve descripción";
-          document.getElementById('modal-producto').classList.remove('oculto');
-        });
-      });
-    
-      document.querySelector('.modal .cerrar').addEventListener('click', () => {
-        document.getElementById('modal-producto').classList.add('oculto');
-      });
-    </script>
     
     <%- include('partials/footer') %>
 </body>
