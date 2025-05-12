@@ -203,7 +203,7 @@ body {
 }
 
 .marcas-logos {
-    padding: 5em;
+    padding: 2em 5em 0 5em;
     display: flex;
     justify-content: space-evenly;
     margin-top: 2em;
@@ -242,7 +242,6 @@ body {
     z-index: 10; /* Mantenerlo siempre por encima */
     width: 100%; /* Asegurar que ocupe todo el ancho */
     text-align: center; /* Centrar el texto */
-    margin-bottom: 20px; /* Darle espacio antes de las marcas */
 }
 
 /* Contenedor general cuando está expandido */
@@ -277,10 +276,6 @@ body {
     text-align: center;
 }
 
-/* Asegurar que el título no se mueva */
-.titulo-subtitulo {
-    margin-bottom: 20px;
-}
 
 /* Contenedor de las marcas */
 .marcas-logos {
@@ -341,7 +336,7 @@ body {
 
 .marcas-home_contenedor {
     text-align: center;
-    margin: 50px auto;
+    margin: 10px auto 0 auto;
 }
 
 .marcas-logos {
@@ -519,13 +514,13 @@ body {
 .contenedorComentarios {
     width: 100%;
     height: auto;
-    margin: 0;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: -4em;
-    padding: 5em 0em 8em 0;
+    padding: 0em 0em 5em 0;
     border-radius: 1em;
     background:#fff; /* Fondo semitransparente para que se vea la imagen */
     backdrop-filter: blur(5px); /* Difuminar la imagen para mejorar el efecto */
@@ -536,8 +531,8 @@ body {
     margin-bottom: 2em;
 }
 .contenedor1, .contenedor2{
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 270px;
     padding: 10px;
     background-color: #b3d0e4;
     border-radius: 1em;
@@ -577,6 +572,7 @@ body {
     position: absolute;
     bottom: 5px;
     left: 25px;
+    font-size: 25px;
 }
 .contenedor-titulo-propuesta{
     margin-top: 2em;
@@ -617,7 +613,6 @@ body {
    .contenedorComentarios h2{  font-size: 40px}
    .marcas-home_contenedor{
     height: auto;
-    padding-top: 10%;
     padding-bottom: 10%;
     margin-top: 0;
    }
@@ -735,6 +730,7 @@ body {
 
     .titulo-subtitulo p {
         font-size: 16px;
+        margin-bottom: 0%;
     }
 
     .grid-propuestaIcons {

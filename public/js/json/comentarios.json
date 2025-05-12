@@ -1,18 +1,21 @@
-[
-    {
-        "texto": "Gracias a la dedicación y profesionalismo de su equipo, pudimos superar nuestros desafíos en tiempo récord. La calidad de sus productos y el compromiso con cada detalle nos dejaron totalmente satisfechos. Sin duda, es un placer trabajar con ellos.",
-        "marca": "Puma"
-    },
-    {
-        "texto": "El trabajo realizado superó nuestras expectativas. Gracias a su constante comunicación y excelencia en producción, pudimos cumplir con todos nuestros objetivos a tiempo. Una empresa en la que podemos confiar plenamente.",
-        "marca": "Reef"
-    },
-    {
-        "texto": "Estamos muy agradecidos por el nivel de atención y el cumplimiento de plazos. Su capacidad para adaptarse a nuestras necesidades y su atención al detalle nos brindaron una experiencia excepcional. Recomendamos su servicio sin dudar.",
-        "marca": "Just Sky?"
-    },
-    {
-        "texto": "Desde que comenzamos a trabajar con ellos, nos han demostrado ser un socio confiable y profesional. La calidad de su trabajo y la forma en que gestionan cada proyecto nos da la confianza de que siempre entregan lo mejor.",
-        "marca": "Ruge"
-    }
-]
+
+    [
+        {
+          "texto": "Gracias a la <b>dedicación</b> y <b>profesionalismo</b> de su equipo, pudimos superar nuestros <b>desafíos</b> en tiempo récord. La <b>calidad</b> de sus productos y el <b>compromiso</b> con cada detalle nos dejaron totalmente satisfechos. Sin duda, es un <b>placer</b> trabajar con ellos.",
+          "marca": "Puma"
+        },
+        {
+          "texto": "El trabajo realizado superó nuestras <b>expectativas</b>. Gracias a su constante <b>comunicación</b> y <b>excelencia</b> en producción, pudimos cumplir con todos nuestros <b>objetivos</b> a tiempo. Una empresa en la que podemos <b>confiar plenamente</b>.",
+          "marca": "Reef"
+        },
+        {
+          "texto": "Estamos muy agradecidos por el nivel de <b>atención</b> y el <b>cumplimiento de plazos</b>. Su capacidad para <b>adaptarse</b> a nuestras necesidades y su <b>atención al detalle</b> nos brindaron una experiencia <b>excepcional</b>. <b>Recomendamos</b> su servicio sin dudar.",
+          "marca": "Just Ski?"
+        },
+        {
+          "texto": "Desde que comenzamos a trabajar con ellos, nos han demostrado ser un socio <b>confiable</b> y <b>profesional</b>. La <b>calidad</b> de su trabajo y la forma en que <b>gestionan</b> cada proyecto nos da la <b>confianza</b> de que siempre entregan lo mejor.",
+          "marca": "Ruge"
+        }
+    ]
+      
+
