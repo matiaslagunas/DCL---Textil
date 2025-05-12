@@ -6,7 +6,9 @@ const comentarios = require('../marcas y demas/marcas.json')
 router.get('/', (req, res) => {
    
     res.render('index', { 
-        comentarios: comentarios.comentarios 
+        comentarios: comentarios.comentarios,
+        activePage: 'inicio'
     });
+    
 });
 module.exports = router;

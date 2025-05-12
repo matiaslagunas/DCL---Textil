@@ -4,6 +4,6 @@ const router = express.Router();
 // Ruta para la página principal
 router.get('/L-ser', (req, res) => {
    
-    res.render('servicios');
+    res.render('servicios', { activePage: 'servicios'});
 });
 module.exports = router;

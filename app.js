@@ -20,7 +20,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Sirve Bootstrap CSS y JS desde node_modules
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
-
+// Middleware para establecer activePage
+app.use((req, res, next) => {
+  const path = req.path;
+  if (path.startsWith('/nosotros')) res.locals.activePage = 'nosotros';
+  else if (path.startsWith('/servicios')) res.locals.activePage = 'servicios';
+  else if (path.startsWith('/productos')) res.locals.activePage = 'productos';
+  else if (path.startsWith('/Contacto')) res.locals.activePage = 'contacto';
+  else res.locals.activePage = 'inicio';
+  next();
+});
 // Rutas
 app.use('/', indexRoute);
 app.use('/Contacto', contactoRoute);

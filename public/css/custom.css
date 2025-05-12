@@ -49,7 +49,16 @@ body {
     opacity: 0.85; /* Opacidad del 60% */
     z-index: 10; /* Asegura que esté por encima del video */
 }
-
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff; /* Cambialo si querés otro color */
+}
+.nav-link.active:hover {
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: none;
+}
 /* NAVBAR TRANSPARENTE */
 .navbar {
     background-color: #b2d5ee !important;

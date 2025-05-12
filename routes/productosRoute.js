@@ -19,7 +19,7 @@ function obtenerProductos() {
 
 // Página principal de productos (sin listado todavía)
 router.get('/', (req, res) => { 
-    res.render('productos_previa');
+    res.render('productos', { activePage: 'productos' });
 });
 
 // Rutas para cada categoría

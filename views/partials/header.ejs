@@ -15,20 +15,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/nosotros/M-nos">Nosotros</a>
+                        <a class="nav-link <%= activePage === 'nosotros' ? 'active' : '' %>" href="/nosotros/M-nos">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/servicios/L-ser">Servicios</a>
+                        <a class="nav-link <%= activePage === 'servicios' ? 'active' : '' %>" href="/servicios/L-ser">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/productos">Productos</a>
+                        <a class="nav-link <%= activePage === 'productos' ? 'active' : '' %>" href="/productos">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Contacto/H-contacto">
+                        <a class="nav-link <%= activePage === 'contacto' ? 'active' : '' %>" href="/Contacto/H-contacto">
                             <button class="btn btn-contactanos">Contáctanos</button>
                         </a>
                     </li>
                 </ul>
+                
+                
             </div>
         </div>
     </nav>
