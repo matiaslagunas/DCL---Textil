@@ -1,21 +1,151 @@
-.imagenServicios{
-    background-color: blue;
-}
-.textoServicios{
-    width: 100%;
-    height: auto;
-    padding: 5em 0;
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #b2d5ee, #e1eff5);
+
+  }
+  
+  .servicios {
+    max-width: 1200px;
+    margin: 5em auto;
+    text-align: center;
+  }
+  
+  .servicios h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  /* Grilla general */
+  .grid {
+    display: grid;
+    gap: 30px;
+  }
+  
+  /* Servicios: 3 columnas en desktop */
+  .grid:not(.productos) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+  }
+  
+  /* Productos: 3 columnas */
+  .grid.productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Tarjeta general */
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius:  15px;
+    box-shadow: 5px 20px 35px rgba(0, 0, 0, 0.20);
+    transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Igual altura para las tarjetas de servicio */
+  .servicio {
+    height: 200px;
+    min-height: 200px;
+  }
+  
+  /* Contenido horizontal */
+  .contenido-card {
+    display: flex;
     align-items: center;
-}
-.textoServicios ul li {
-    font-size: 18px;
-}
+    gap: 20px;
+    height: 100%;
+  }
+  
+  /* Icono */
+  .icono {
+    font-size: 2.8rem;
+    flex-shrink: 0;
+  }
+  
+  /* Texto */
+  .texto {
+    text-align: left;
+  }
+  
+  .texto h2 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+  }
+  
+  .texto p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #444;
+  }
+  
 
 
-.desplegablesSection{
-    width: 60%;
-    margin: 3em auto;
-}
+
+
+  /* Productos */
+  .producto {
+    justify-content: start;
+    background: linear-gradient(to bottom, #b2d5ee, transparent);
+
+  }
+  .producto h3 {
+    margin-bottom: 10px;
+  }
+  
+  .producto ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .producto li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 992px) {
+    .grid:not(.productos),
+    .grid.productos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .servicio {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid:not(.productos),
+    .grid.productos {
+      grid-template-columns: 1fr;
+    }
+  
+    .contenido-card {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .icono {
+      font-size: 2.2rem;
+    }
+  
+    .texto h2 {
+      font-size: 1rem;
+    }
+  
+    .texto p {
+      font-size: 0.9rem;
+    }
+  }
+  
