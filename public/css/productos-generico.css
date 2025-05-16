@@ -76,9 +76,19 @@ text-decoration: none;
     padding: 1em;
     color: #000;
 }
-.link-producto{
+.link-producto {
     text-decoration: none;
-}
+    display: inline-block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .link-producto:hover {
+    transform: scale(1.03) translateY(-5px) rotateX(2deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  
 
 .producto h4 {
     font-size: 1rem;
