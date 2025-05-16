@@ -151,7 +151,9 @@ body {
   .grid.productos {
       grid-template-columns: 1fr;
   }
-
+  .servicios{
+    margin: 3em auto;
+  }
   .contenido-card {
       flex-direction: row;
       align-items: flex-start;
