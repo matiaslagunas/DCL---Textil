@@ -12,44 +12,7 @@
     <link rel="icon" type="image/png" href="/images/logo DCL+ Negro.png">
 </head>
 <body>   
-  <header class="header contenido">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <!-- Logo a la izquierda -->
-            <a class="navbar-brand" href="/">
-                <img src="/images/DCL.png" alt="Logo">
-            </a>
-
-            <!-- Botón para colapsar menú en dispositivos pequeños -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Enlaces de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link <%= activePage === 'nosotros' ? 'active' : '' %>" href="/nosotros/M-nos">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <%= activePage === 'servicios' ? 'active' : '' %>" href="/servicios/L-ser">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <%= activePage === 'productos' ? 'active' : '' %>" href="/productos">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <%= activePage === 'contacto' ? 'active' : '' %>" href="/Contacto/H-contacto">
-                            <button class="btn btn-contactanos">Contáctanos</button>
-                        </a>
-                    </li>
-                </ul>
-                
-                
-            </div>
-        </div>
-    </nav>
-</header>
-
+  <%- include('partials/header') %>
  <section class="servicios animated">
   <h1>Servicios Especializados</h1>
 
@@ -146,11 +109,9 @@
     </div>
   </div>
 </section>
-
+<%- include('partials/footer') %>
     <script src="/js/interacciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <%- include('partials/footer') %> 
+     
 </body>
 </html>

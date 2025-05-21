@@ -1,11 +1,15 @@
 .imagenNosotros {
     width: 100%;
-    height: auto;
+    height: 500px; /* Ajustá según lo que busques */
+    overflow: hidden;
 }
+
 .imagenNosotros img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Recorta para que se vea más alto y no deformado */
 }
+
 
 .contenedorNos {
     background: linear-gradient(to bottom, #3a93d2, #a6c4d9);

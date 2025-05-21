@@ -6,4 +6,5 @@ router.get('/M-nos', (req, res) => {
    
     res.render('nosotros', { activePage: 'nosotros' });
 });
+
 module.exports = router;
