@@ -10,12 +10,13 @@ const productos_generalPath = path.join(__dirname, '..', 'public', 'js', 'json',
 function obtenerProductos() {
     try {
         const productosJSON = JSON.parse(fs.readFileSync(productos_generalPath, 'utf-8'));
-        return Object.values(productosJSON); // Convertir en array por si es objeto
+        return productosJSON;
     } catch (error) {
         console.error('Error leyendo productos_general.json:', error);
-        return [];
+        return { hombres: [], mujeres: [], ninios: [], unisex: [] };
     }
 }
+
 
 // Página principal de productos (sin listado todavía)
 router.get('/', (req, res) => { 
@@ -25,22 +26,23 @@ router.get('/', (req, res) => {
 // Rutas para cada categoría
 router.get('/Hombres', (req, res) => { 
     const productos = obtenerProductos();
-    res.render('productos_hombres', { pagina : "hombres" , productos });
+    res.render('productos_hombres', { pagina: "hombres", productos: productos.hombres });
 });
 
 router.get('/Mujeres', (req, res) => { 
     const productos = obtenerProductos();
-    res.render('productos_mujeres', { pagina : "mujeres" , productos });
+    res.render('productos_mujeres', { pagina: "mujeres", productos: productos.mujeres });
 });
 
 router.get('/Ninios', (req, res) => { 
     const productos = obtenerProductos();
-    res.render('productos_niños', { pagina : "ninios" , productos });
+    res.render('productos_niños', { pagina: "ninios", productos: productos.ninios });
 });
 
 router.get('/Unisex', (req, res) => { 
     const productos = obtenerProductos();
-    res.render('productos_unisex', { pagina : "unisex" , productos });
+    res.render('productos_unisex', { pagina: "unisex", productos: productos.unisex });
 });
+
 
 module.exports = router;

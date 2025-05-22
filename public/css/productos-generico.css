@@ -66,10 +66,10 @@ text-decoration: none;
 
 .producto img {
     width: 100%;
-    height: 280px;
+    height: auto;
     object-fit: contain;
     background: #ddd;
-    padding: 15px 0;
+    padding:  0;
 }
 
 .producto .info {
