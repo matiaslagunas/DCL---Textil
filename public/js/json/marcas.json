@@ -1,47 +1,48 @@
 {
     "puma": {
-        "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "PUMA",
-        "descripcion": "Puma es sinónimo de innovación y alto rendimiento. En DCL+ trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños vanguardistas."
+      "image": "images/Logo Puma transparente.fw (1).png",
+      "titulo": "PUMA",
+      "descripcion": "<b>Puma</b> es sinónimo de <b>innovación</b> y <b>alto rendimiento</b>. En <b>DCL+</b> trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños <b>vanguardistas</b>."
     },
     "head": {
-        "image": "images/head-logo-png-transparent (1).png",
-        "titulo": "HEAD",
-        "descripcion": "HEAD es una marca líder en el mundo del deporte, reconocida por su innovación y calidad. En DCL+, desarrollamos indumentaria técnica que combina diseño, confort y alto rendimiento."
+      "image": "images/head-logo-png-transparent (1).png",
+      "titulo": "HEAD",
+      "descripcion": "<b>HEAD</b> es una marca líder en el mundo del deporte, reconocida por su <b>innovación</b> y <b>calidad</b>. En <b>DCL+</b>, desarrollamos indumentaria técnica que combina <b>diseño</b>, <b>confort</b> y <b>alto rendimiento</b>."
     },
     "reef": {
-        "image": "images/Logo Reef - Transparente.fw.png",
-        "titulo": "REEF",
-        "descripcion": "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
+      "image": "images/Logo Reef - Transparente.fw.png",
+      "titulo": "REEF",
+      "descripcion": "<b>Reef</b> es la marca elegida por los amantes del <b>surf</b> y la <b>aventura</b>. En <b>DCL+</b>, compartimos su espíritu y diseñamos ropa <b>cómoda</b> y <b>resistente</b> para acompañar cada desafío."
     },
-    "puma2": {
-        "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "PUMA",
-        "descripcion": "Puma es sinónimo de innovación y alto rendimiento. En DCL+ trabajamos juntos para desarrollar indumentaria que potencia el rendimiento de los atletas con diseños vanguardistas."
+    "unionGanadera": {
+      "image": "images/unionGanadera.png",
+      "titulo": "UNION GANADERA",
+      "descripcion": "<b>Unión Ganadera</b> representa la <b>tradición</b> y la <b>fuerza del campo argentino</b>. En <b>DCL+</b>, colaboramos para diseñar indumentaria <b>resistente</b> y <b>funcional</b>, pensada para acompañar el trabajo diario rural."
     },
-    "head2": {
-        "image": "images/head-logo-png-transparent (1).png",
-        "titulo": "HEAD",
-        "descripcion": "HEAD es una marca líder en el mundo del deporte, reconocida por su innovación y calidad. En DCL+, desarrollamos indumentaria técnica que combina diseño, confort y alto rendimiento."
+    "CHS": {
+      "image": "images/CHS.png",
+      "titulo": "CHS",
+      "descripcion": "<b>CHS</b> apuesta a la <b>calidad</b> y la <b>innovación</b> en cada detalle. Desde <b>DCL+</b>, diseñamos prendas que reflejan su compromiso con el <b>rendimiento</b> y la <b>durabilidad</b>."
     },
-    "reef2": {
-        "image": "images/Logo Reef - Transparente.fw.png",
-        "titulo": "REEF",
-        "descripcion": "Reef es la marca elegida por los amantes del surf y la aventura. En DCL+, compartimos su espíritu y diseñamos ropa cómoda y resistente para acompañar cada desafío."
+    "pony": {
+      "image": "images/pony.png",
+      "titulo": "PONY",
+      "descripcion": "<b>Pony</b> es un <b>ícono del estilo urbano</b> con <b>espíritu deportivo</b>. En <b>DCL+</b>, combinamos su identidad con nuestra experiencia textil para crear ropa <b>cómoda</b>, <b>moderna</b> y con <b>actitud</b>."
     },
-    "vans": {
-        "image": "images/Logo Puma transparente.fw (1).png",
-        "titulo": "VANS",
-        "descripcion": "Vans es la marca elegida por los fanáticos de los deportes extremos y la moda urbana. En DCL+, diseñamos ropa y calzado que reflejan su estilo único."
+    "mateuSports": {
+      "image": "images/mateuSports.png",
+      "titulo": "MATEU SPORTS",
+      "descripcion": "<b>Mateu Sports</b> es sinónimo de <b>energía</b>, <b>movimiento</b> y <b>pasión por el deporte</b>. En <b>DCL+</b>, desarrollamos conjuntos deportivos que acompañan el ritmo de los atletas, con <b>materiales técnicos</b> y <b>diseños únicos</b>."
     },
-    "newBalance": {
-        "image": "images/newbalance-logo.png",
-        "titulo": "NEW BALANCE",
-        "descripcion": "New Balance es una marca que combina innovación tecnológica con estilo clásico. En DCL+, creamos productos deportivos con un enfoque en comodidad y rendimiento."
+    "silla": {
+      "image": "images/silla.png",
+      "titulo": "SILLA ARGENTINA",
+      "descripcion": "<b>Silla Argentina</b> combina <b>diseño nacional</b> con <b>calidad artesanal</b>. En <b>DCL+</b>, confeccionamos prendas con <b>identidad</b>, pensadas para reflejar la <b>elegancia</b> y el <b>confort</b> en cada detalle."
     },
-    "asics": {
-        "image": "images/asics-logo.png",
-        "titulo": "ASICS",
-        "descripcion": "ASICS es una marca de renombre mundial en el ámbito del running y el deporte. En DCL+, colaboramos para desarrollar calzado y ropa de alto rendimiento para atletas."
+    "ruge": {
+      "image": "images/ruge.png",
+      "titulo": "RUGE",
+      "descripcion": "<b>Ruge</b> es <b>fuerza</b>, <b>audacia</b> y <b>estilo</b>. Desde <b>DCL+</b>, creamos indumentaria que acompaña esa energía con <b>diseños potentes</b> y <b>materiales preparados</b> para cualquier desafío."
     }
-}
+  }
+  
