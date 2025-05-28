@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background:linear-gradient(to bottom,#93cbe9 ,#daeef8);
+    background: linear-gradient(to bottom, #93cbe9, #daeef8);
 }
 
 /* Título */
@@ -13,23 +13,35 @@ body {
     margin-bottom: 1rem;
     margin-top: 0em;
 }
-.titulo{
-    margin-top: 5em;;
+
+.titulo {
+    margin-top: 5em;
     padding: 2em;
 }
+
 .titulo a {
     color: #fff;
 }
-.titulo h2{
+
+.titulo h2 {
     color: #fff;
     text-align: start;
 }
-.titulo h5{
+
+.titulo h5 {
     text-align: center;
 }
-.titulo h5 a{
-text-decoration: none;
+
+.titulo h5 a {
+    text-decoration: none;
 }
+
+.titulo h5 a.activo {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
 /* Sección principal con scroll horizontal */
 .productos-scroll {
     overflow-x: auto;
@@ -47,12 +59,6 @@ text-decoration: none;
     padding: 1rem;
     width: max-content;
 }
-.titulo h5 a.activo {
-    text-decoration:underline !important;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-     /* Ajusta el valor para moverlo más arriba */
-}
 
 /* Tarjeta de producto */
 .producto {
@@ -61,7 +67,7 @@ text-decoration: none;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
@@ -69,26 +75,26 @@ text-decoration: none;
     height: auto;
     object-fit: contain;
     background: #ddd;
-    padding:  0;
+    padding: 0;
 }
 
 .producto .info {
     padding: 1em;
     color: #000;
 }
+
 .link-producto {
     text-decoration: none;
     display: inline-block;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     transform-style: preserve-3d;
-  }
-  
-  .link-producto:hover {
+}
+
+.link-producto:hover {
     transform: scale(1.03) translateY(-5px) rotateX(2deg);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     z-index: 2;
-  }
-  
+}
 
 .producto h4 {
     font-size: 1rem;
@@ -102,7 +108,7 @@ text-decoration: none;
     margin: 0;
 }
 
-/* Scroll azul como en la imagen */
+/* Scroll personalizado */
 .productos-scroll::-webkit-scrollbar {
     height: 8px;
 }
@@ -115,6 +121,8 @@ text-decoration: none;
 .productos-scroll::-webkit-scrollbar-track {
     background-color: #e0e0e0;
 }
+
+/* Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -126,65 +134,158 @@ text-decoration: none;
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
-  @media (max-width: 800px) {
-    .modal-contenido div{
+}
 
-        display: flex;
-        flex-direction: column;
-
-      }
-      #modal-imagen{
-        max-width: 400px;
-        width: 80%;
-        height: auto;
-      }
-  }
-  .modal-contenido {
+.modal-contenido {
     background: white;
     padding: 2em;
     border-radius: 10px;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 90%;
     position: relative;
-  }
-  #modal-imagen{
+}
+
+#modal-imagen {
     width: 400px;
     height: auto;
-  }
-  .modal .cerrar {
+}
+
+.modal .cerrar {
     position: absolute;
     top: 15px;
     right: 20px;
     font-size: 28px;
     cursor: pointer;
-  }
-  
-  .oculto {
-    display: none;
-  }
-  @media (max-width: 400px) {
+}
 
-      #modal-imagen{
+.oculto {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 990) {
+    .mobile-modal{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .zoom-container {
+        position: relative;
+        overflow: none;
+        width: 100%;
+        cursor: none;
+        background-repeat: no-repeat;
+        background-size: auto; /* sin zoom de base */
+        background-position: center;
+        background-color: #eee;
+    }
+    
+    .zoom-container:hover {
+        background-size: none; /* zoom al hacer hover */
+        cursor:none;
+    }
+    
+    .zoom-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        opacity: 0; /* se oculta para mostrar solo el fondo */
+    }
+    
+}
+@media (max-width: 800px) {
+    #modal-imagen {
+        max-width: 400px;
+        width: 80%;
+        height: auto;
+    }
+    .modal-contenido div{
+        display: grid;
+        
+    }
+}
+
+@media (max-width: 400px) {
+    #modal-imagen {
         max-width: 100%;
         height: auto;
-      }
-      .modal-contenido {
+    }
+
+    .modal-contenido {
         background: white;
         padding: 12px;
+    }
+}
 
-      }
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Títulos principales */
 h1, h2, .titulo-principal {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
-/* Subtítulos y textos secundarios */
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 340;
+}
+
+/* Zoom para la imagen dentro del modal */
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    cursor: zoom-in;
+    background-repeat: no-repeat;
+    background-size: 100% auto; /* sin zoom de base */
+    background-position: center;
+    transition: background-position 0.1s ease, background-size 0.3s ease;
+    background-color: #eee;
+}
+
+.zoom-container:hover {
+    background-size: 300% auto; /* zoom al hacer hover */
+    cursor: zoom-out;
+}
+
+.zoom-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0; /* se oculta para mostrar solo el fondo */
+}
+/* Cuando el modal esté expandido en pantallas medianas o chicas */
+@media (max-width: 990px) {
+    .mobile-modal {
+        flex-direction: column !important;
+        align-items: center; /* centra la imagen y texto */
+    }
+
+    .mobile-modal .zoom-container {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 1em;
+    }
+
+    .mobile-modal .texto-modal {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .mobile-modal {
+        padding: 0;
+    }
+
+    .mobile-modal .zoom-container {
+        max-width: 100%;
+    }
+
+    .mobile-modal .texto-modal {
+        padding: 0 1em;
+    }
 }

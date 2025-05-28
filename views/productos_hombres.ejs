@@ -38,13 +38,15 @@
         <% }) %>
       </div>
     </section>
-    <!-- Modal -->
+<!-- Modal -->
 <div id="modal-producto" class="modal oculto">
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
-    <div style="display: flex; gap: 20px;">
-      <img id="modal-imagen" src="" alt="" style=" background: #eee;" />
-      <div>
+    <div class="mobile-modal" style="display: flex; gap: 20px;">
+      <div class="zoom-container" id="zoom-container">
+        <img id="modal-imagen" src="" alt="" />
+      </div>
+      <div class="texto-modal">
         <h2 id="modal-titulo"></h2>
         <p id="modal-marca"></p>
         <p id="modal-descripcion"></p>
@@ -52,26 +54,62 @@
     </div>
   </div>
 </div>
-    <script>
-      const productos = <%- JSON.stringify(productos) %>;
-    
-      document.querySelectorAll('.link-producto').forEach((link, index) => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault(); // Para que no recargue la página al hacer clic
-    
-          const prod = productos[index];
-          document.getElementById('modal-imagen').src = '/' + prod.image;
-          document.getElementById('modal-titulo').textContent = prod.titulo;
-          document.getElementById('modal-marca').textContent = prod.tipoPrenda;
-          document.getElementById('modal-descripcion').textContent = prod.descripcion;
-          document.getElementById('modal-producto').classList.remove('oculto');
-        });
-      });
-    
-      document.querySelector('.modal .cerrar').addEventListener('click', () => {
-        document.getElementById('modal-producto').classList.add('oculto');
-      });
-    </script>
+
+<script>
+  const productos = <%- JSON.stringify(productos) %>;
+  const zoomContainer = document.getElementById('zoom-container');
+  const modalImagen = document.getElementById('modal-imagen');
+
+  document.querySelectorAll('.link-producto').forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const prod = productos[index];
+      modalImagen.src = '/' + prod.image;
+
+      // Ponemos la imagen como fondo para zoom y reset backgroundPosition
+      zoomContainer.style.backgroundImage = `url('/${prod.image}')`;
+      zoomContainer.style.backgroundPosition = 'center';
+      zoomContainer.classList.remove('zoom-active');
+
+      document.getElementById('modal-titulo').textContent = prod.titulo;
+      document.getElementById('modal-marca').textContent = prod.tipoPrenda;
+      document.getElementById('modal-descripcion').textContent = prod.descripcion;
+      document.getElementById('modal-producto').classList.remove('oculto');
+    });
+  });
+
+  // Activar zoom al entrar el mouse
+  zoomContainer.addEventListener('mouseenter', () => {
+    zoomContainer.classList.add('zoom-active');
+  });
+
+  // Mover el zoom con el mouse
+  zoomContainer.addEventListener('mousemove', e => {
+    if (!zoomContainer.classList.contains('zoom-active')) return;
+
+    const rect = zoomContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+
+    zoomContainer.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+  });
+
+  // Desactivar zoom al salir el mouse
+  zoomContainer.addEventListener('mouseleave', () => {
+    zoomContainer.classList.remove('zoom-active');
+    zoomContainer.style.backgroundPosition = 'center';
+  });
+
+  // Cerrar modal
+  document.querySelector('.modal .cerrar').addEventListener('click', () => {
+    document.getElementById('modal-producto').classList.add('oculto');
+  });
+</script>
+
     
     <%- include('partials/footer') %>
 </body>
