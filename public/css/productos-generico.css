@@ -127,16 +127,31 @@ text-decoration: none;
     align-items: center;
     z-index: 999;
   }
-  
+  @media (max-width: 800px) {
+    .modal-contenido div{
+
+        display: flex;
+        flex-direction: column;
+
+      }
+      #modal-imagen{
+        max-width: 400px;
+        width: 80%;
+        height: auto;
+      }
+  }
   .modal-contenido {
     background: white;
     padding: 2em;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 1000px;
     width: 90%;
     position: relative;
   }
-  
+  #modal-imagen{
+    width: 400px;
+    height: auto;
+  }
   .modal .cerrar {
     position: absolute;
     top: 15px;
@@ -147,6 +162,18 @@ text-decoration: none;
   
   .oculto {
     display: none;
+  }
+  @media (max-width: 400px) {
+
+      #modal-imagen{
+        max-width: 100%;
+        height: auto;
+      }
+      .modal-contenido {
+        background: white;
+        padding: 12px;
+
+      }
   }
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
