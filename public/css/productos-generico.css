@@ -148,4 +148,16 @@ text-decoration: none;
   .oculto {
     display: none;
   }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Títulos principales */
+h1, h2, .titulo-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Subtítulos y textos secundarios */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 340;
+}
