@@ -208,59 +208,61 @@ body {
     transition: transform 1s ease-in-out;
 }
 
-/* SECCIÓN DE PROPUESTA DE VALOR */
 .propuesta-de-valor_contenedor {
-    position: relative;
-    bottom: 10px;
-    width: 100%;
-    height: auto;
-    margin: 0; 
-    padding: 7em 15% 0 15%;
+  width: 100%;
+  padding: 6em 10% 4em 10%;
+  background: transparent;
 }
 
 .contenedor-titulo-propuesta {
-    width: 100%;
-    text-align: center;
+  text-align: center;
+  margin-bottom: 3em;
 }
 
 .contenedor-titulo-propuesta h2 {
-    font-size: 40px;
-    margin-bottom: 1em;
+  font-size: 40px;
+  color: #222;
+  margin-bottom: 0.5em;
 }
 
 .grid-propuestaIcons {
-    margin-top: 4em;
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 100px 100px;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.item1_item, .item2_item, .item3_item, .item4_item, 
-.item5_item, .item6_item, .item7_item, .item8_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item5_item, .item6_item, .item7_item, .item8_item {
-    font-size: 18px;
-    text-align: center;
-}
-
-.item1_item img, .item2_item img, .item3_item img, .item4_item img {
-    width: 100px;
-    height: auto;
-    color: #007cd5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .grid-propuestaIcons.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.propuesta-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2em;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.propuesta-card:hover {
+  transform: translateY(-5px);
+}
+
+.propuesta-card img {
+  width: 60px;
+  margin-bottom: 1em;
+}
+
+.propuesta-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
 }
 
 /* SECCIÓN MARCAS */
@@ -431,166 +433,6 @@ body {
     transition: all 0.5s ease;
 }
 
-/* Ajuste de la marca */
-.marca {
-    flex: 1;
-    background: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.marca img {
-    max-width: 100%;
-    transition: all 0.5s ease;
-}
-
-/* Estilos de la marca expandida */
-.marca.expandida {
-    display: flex;
-    flex-direction: row; /* Coloca la imagen a la izquierda y el contenido a la derecha */
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px;
-    position: relative;
-}
-
-.marca.expandida .imagen {
-    flex: 1;
-    max-width: 250px;
-    margin-right: 20px; /* Separar la imagen del contenido */
-}
-
-.marca.expandida .marca-info {
-    flex: 2;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.marca.expandida h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.marca.expandida p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.marca .parrafo-logos a {
-    display: inline-block;
-    margin-top: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribuye los elementos en el bloque */
-    height: 100%; /* Asegura que tome toda la altura disponible */
-}
-
-.texto {
-    flex-grow: 1; /* Hace que el texto ocupe todo el espacio disponible */
-}
-
-.boton {
-    margin-top: auto; /* Empuja el botón hacia la parte inferior */
-}
-
-.marcas-logos {
-    display: flex;
-    gap: 10px;
-}
-
-.marca {
-    display: flex;
-    flex-direction: column;
-    width: calc(33.33% - 10px); /* Tres marcas en una fila */
-    overflow: hidden;
-}
-
-.parrafo-logos {
-    margin-top: auto; /* Mantiene el botón "Ver más" siempre abajo */
-    text-align: center;
-}
-
-.marca.expandida {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: flex-start;
-    padding: 40px;
-    position: relative;
-}
-
-.marca {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between; /* Asegura que el contenido se distribuya */
-    width: 270px; /* Ancho más angosto por defecto */
-    height: 400px; /* Mantiene la altura fija */
-    padding: 20px;
-    border: 1px solid #ddd;
-    position: relative;
-}
-
-.marca .imagen {
-    max-width: 100%;
-    height: auto;
-}
-
-.imagen img {
-    margin-top: 5em;
-}
-
-.marca .parrafo-logos {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    text-align: center;
-}
-
-.marca-info {
-    width: 100%;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-}
-
-.marcas-logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20px; /* Espaciado entre elementos */
-    max-width: 1150px;
-    margin: 0 auto;
-}
-
-/* Estilos específicos para la imagen expandida */
-.marca.expandida .imagen {
-    flex: 1;
-    max-width: 250px;
-    text-align: center; /* Asegura que la imagen esté bien alineada */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra la imagen en el contenedor */
-}
-
-.marca.expandida .imagen img {
-    margin: 0 !important; /* Elimina cualquier margen */
-    max-height: 100%; /* Asegura que la imagen se ajuste al contenedor */
-}
 
 
 
@@ -607,7 +449,7 @@ body {
     gap: -4em;
     padding: 0em 0em 5em 0;
     border-radius: 1em;
-    background:#fff; /* Fondo semitransparente para que se vea la imagen */
+    background: transparent; /* Fondo semitransparente para que se vea la imagen */
     backdrop-filter: blur(5px); /* Difuminar la imagen para mejorar el efecto */
 }
 
@@ -773,7 +615,7 @@ body {
     gap: 14em;
     padding: 5em 0em 8em 0;
     border-radius: 1em;
-    background:#fff; /* Fondo semitransparente para que se vea la imagen */
+    background: transparent;
     backdrop-filter: blur(5px); /* Difuminar la imagen para mejorar el efecto */
 }
     .contenedor1, .contenedor2 {
@@ -943,155 +785,7 @@ body {
     }
 }
 
-/* Estilos para la sección de marcas */
-.marcas-home_contenedor {
-    text-align: center;
-}
 
-.titulo-subtitulo h2 {
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.titulo-subtitulo p {
-    font-size: 20px;
-}
-
-.marcas-navegacion {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-}
-
-.marcas-logos {
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-}
-
-/* Estilo básico de cada marca */
-.marca {
-    flex: 1fr 1fr 1fr; /* Fijo para las marcas no expandidas */
-    transition: all 0.3s ease;
-    flex-direction: column;
-    flex: 1fr;
-    align-items: center;
-    justify-content: space-between;
-    width: 270px; /* Ancho por defecto */
-    height: 400px; /* Altura fija */
-    padding: 20px;
-    border: 1px solid #ddd;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-/* Imagen y contenido inicial */
-.marca .imagen {
-    max-width: 100%;
-    height: auto;
-}
-
-.marca-info {
-    display: none; /* Inicialmente oculto */
-    text-align: center;
-}
-
-.marca .parrafo-logos a {
-    display: inline-block;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-/* Estilo cuando la marca está expandida */
-.marca.expandida {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    width: 300px; /* Ocupar el 100% del ancho */
-    flex: 1 1 330px;
-}
-
-.marca.expandida .imagen {
-    max-width: 250px; /* Limitar el tamaño de la imagen */
-    margin-right: 20px; /* Separar la imagen del contenido */
-}
-
-.marca.expandida .marca-info {
-    display: block; /* Mostrar el contenido de la marca */
-}
-
-.marca.expandida .parrafo-logos {
-    display: none; /* Ocultar el botón de "Ver más" */
-}
-
-/* Controles de navegación */
-.flecha {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.ver-boton {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: transparent;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: color 0.3s;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .ver-boton:hover {
-    color: #007cd5;
-  }
-  .marca .imagen img {
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-/* Estilos para los botones */
-.ver-boton {
-    display: inline-block;
-    padding: 8px 12px;
-    background: transparent;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: color 0.3s;
-    cursor: pointer;
-    font-weight: bold;
-    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
-    left: 30%;
-    right: 30%; /* Alineación derecha con margen */
-    bottom: 20px; /* Misma posición vertical para ambos */
-}
-
-.ver-boton:hover {
-    color: #007cd5;
-}
-
-/* Ocultar/mostrar botones según estado */
-.ver-menos {
-    display: none;
-}
-
-.marca.expandida .ver-mas {
-    display: none;
-}
-
-.marca.expandida .ver-menos {
-    display: inline-block;
-}
 /* Importar desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
@@ -1107,3 +801,123 @@ body{
     font-weight: 340;
 }
 
+
+ .seccion-marcas {
+    padding: 5rem 2rem;
+    background: transparent;
+    text-align: center;
+  }
+
+  .seccion-marcas__titulo h2 {
+    font-size: 36px;
+    margin-bottom: 0.5em;
+  }
+
+  .seccion-marcas__titulo p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .seccion-marcas__navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+.seccion-marcas__contenedor {
+  display: flex;
+  gap: 1rem;
+  overflow: visible; /* Permite ver el flip completo */
+}
+
+
+  .navegacion__flecha {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .tarjeta-marca {
+    background-color: transparent;
+    width: 280px;
+    height: 360px;
+    perspective: 1000px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+
+  .tarjeta-marca__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .tarjeta-marca:hover .tarjeta-marca__inner {
+    transform: rotateY(180deg);
+  }
+
+  .tarjeta-marca__front,
+  .tarjeta-marca__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .tarjeta-marca__front img {
+    width: 80%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+  }
+
+  .tarjeta-marca__back {
+    background: linear-gradient(to bottom right, #0077c0, #61dafb);
+    color: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tarjeta-marca__back h3 {
+    margin-bottom: 0.5em;
+  }
+
+  .tarjeta-marca__back p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+
+
+
+  body {
+  background: none;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* alto del efecto */
+  background: linear-gradient(to bottom, transparent 0%, #c6e7fa 50%, transparent 100%);
+  z-index: -1;
+}
