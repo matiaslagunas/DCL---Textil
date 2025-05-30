@@ -624,10 +624,9 @@ body {
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 1em;
-
-    
+    padding: 1em; 
 }
+
 .contenedor1 .comentario, .contenedor2 .comentario{
     width: 100%;
     height: auto;
@@ -650,7 +649,7 @@ body {
     position: relative;
 }
 .contenedor1  div h5, .contenedor2 div h5{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .nombreComent{
@@ -705,7 +704,7 @@ body {
     height: 225px;
 }
 .contenedor1  div h5, .contenedor2 div h5{
-    font-size: 16px;
+    font-size: 15px;
 }
 .contenedor1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1072,7 +1071,8 @@ body {
     cursor: pointer;
     font-weight: bold;
     position: absolute; /* Posicionamiento absoluto dentro del contenedor */
-    right: 20px; /* Alineación derecha con margen */
+    left: 30%;
+    right: 30%; /* Alineación derecha con margen */
     bottom: 20px; /* Misma posición vertical para ambos */
 }
 

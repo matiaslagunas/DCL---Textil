@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 div.innerHTML = `
                     <div><img src="/images/comentario.svg" alt=""></div>
                     <div class="comentario">
-                    <p class="nombreComent"><b>${comentario.marca}</b></p>
+                        <p class="nombreComent"><b>${comentario.marca}</b></p>
                         <h5>${comentario.texto}</h5>
                     </div>
                 `;
