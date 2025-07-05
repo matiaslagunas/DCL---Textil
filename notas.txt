@@ -2,3 +2,4 @@
 
 
 - Problema con el encabezado y el footer en la section "service", se creo serviciosOficial para resolverlo y ahora anda
+-saque los comentarios con un display none en el index.ejs
