@@ -3,20 +3,20 @@
     {
       "image": "images/buzo ruge.jpeg",
       "titulo": "Ruge",
-      "tipoPrenda": "Buzo Canguro",
-      "descripcion": "Este buzo canguro de la marca Ruge está confeccionado en algodón suave y resistente. Cuenta con capucha ajustable, bolsillo frontal tipo canguro y un diseño moderno ideal para el uso diario durante los días frescos. Perfecto para quienes buscan confort sin perder estilo."
+      "tipoPrenda": "Buzo Canguro Estudiantes de La Plata",
+      "descripcion": "Con capucha forrada y diseño bicolor, este buzo combina identidad de club y estilo urbano. Confeccionado en rústico de algodón con detalles contrastantes, es ideal para acompañar el día a día con comodidad."
     },
     {
       "image": "images/campera-just-ski_.jpeg",
       "titulo": "Just ski?",
-      "tipoPrenda": "Campera Deportiva",
-      "descripcion": "La campera deportiva Just Ski está pensada para acompañarte en entrenamientos o actividades al aire libre. Fabricada con materiales livianos y resistentes al viento, presenta un diseño ergonómico que permite libertad de movimiento y una capucha desmontable para mayor practicidad."
+      "tipoPrenda": "Campera Rompeviento con Capucha",
+      "descripcion": "Diseño clásico con cuello y botones, confeccionada en tejido de microfibra UV liviano y resistente. Ideal para unificar imagen institucional con una prenda cómoda, versátil y de fácil mantenimiento."
     },
     {
       "image": "images/chomba naval.jpeg",
-      "titulo": "NIKE",
-      "tipoPrenda": "Remera Oversize",
-      "descripcion": "Esta remera oversize de Nike combina estilo urbano y comodidad. Su tejido de algodón premium garantiza frescura durante todo el día, mientras que su corte holgado se adapta a las nuevas tendencias streetwear. Ideal para combinar con jeans, joggers o bermudas."
+      "titulo": "NAVAL MOTOR",
+      "tipoPrenda": "Chomba Azul Marino",
+      "descripcion": "Liviana, funcional y resistente al viento, esta campera es ideal para actividades al aire libre. Su diseño minimalista con capucha y cierre frontal brinda protección y comodidad sin perder estilo."
     },
     {
       "image": "images/pantalon puma.jpg",
@@ -26,105 +26,63 @@
     },
     {
       "image": "images/remera saucony.jpeg",
-      "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Este short deportivo Reef está pensado para actividades de alta intensidad. Su tela de secado rápido, diseño con aberturas laterales y cintura elástica lo convierten en una opción fresca y cómoda para entrenamientos en climas cálidos o jornadas activas."
+      "titulo": "PUMA",
+      "tipoPrenda": "Short baño",
+      "descripcion": "De calce cómodo y liviano, tela microfibra plana con elastano; este short es ideal para el agua, entrenamiento o uso diario. Con cintura elástica y logo PUMA estampado, combina funcionalidad y diseño."
     }
   ],
   "mujeres": [
     {
       "image": "images/short-mujer.jpg",
-      "titulo": "NIKE",
-      "tipoPrenda": "Remera Oversize",
-      "descripcion": "La remera oversize para mujer de Nike ofrece un ajuste relajado que acompaña los movimientos con estilo. Confeccionada en algodón suave, su diseño minimalista y versátil permite usarla en contextos deportivos o casuales, acompañando cualquier look moderno."
+      "titulo": "REEF",
+      "tipoPrenda": "Short Deportivo Mujer",
+      "descripcion": "De calce cómodo y liviano, tela microfibra plana con elastano; este short es ideal para el entrenamiento o eventos deportivos. Con cintura elástica y estampado, combina funcionalidad y diseño. Diseño clásico estilo retro con cintura elástica y cordón ajustable. Confeccionado en tela liviana y suave, ideal para entrenar o disfrutar del día con comodidad y frescura."
     },
     {
       "image": "images/top-reef.jpg",
-      "titulo": "NIKE",
-      "tipoPrenda": "Remera Oversize",
-      "descripcion": "Con un corte amplio y detalles cuidados, esta remera oversize de Nike es ideal para quienes buscan comodidad sin resignar estética. Perfecta para combinar con jeans o leggings, es una prenda básica imprescindible en cualquier guardarropa femenino actual."
+      "titulo": "REEF",
+      "tipoPrenda": "Top Deportivo Mujer",
+      "descripcion": "Desarrollado en polisap de microfibra. Con diseño de espalda atlética y elástico reforzado. Ofrece sujeción y libertad de movimiento. Ideal para entrenamientos de media intensidad o uso diario, combinando confort y estilo deportivo."
+    },
+    {
+      "image": "images/remera-rush-mujer.jpg",
+      "titulo": "REEF",
+      "tipoPrenda": "Remera Rush Guard Manga Larga",
+      "descripcion": "Prenda de alto rendimiento diseñada para proteger la piel del sol y el roce en actividades acuáticas. Su tela liviana, elástica y de secado rápido ofrece confort y ajuste perfecto para el movimiento. UPF 5o"
+    },
+    {
+      "image": "images/rush-guard-mujere.jpg",
+      "titulo": "REEF",
+      "tipoPrenda": "Rush Guard Manga Corta Mujer",
+      "descripcion": "Ideal para deportes acuáticos, esta remera técnica de manga corta ofrece protección UV y  confort. Su tejido elástico y de secado rápido permite moverse con libertad dentro y fuera del agua."
+    },
+    {
+      "image": "images/calza-larga.jpg",
+      "titulo": "REEF",
+      "tipoPrenda": "Calza Larga",
+      "descripcion": "Confeccionada en microfibra con elastano polisap de alta compresión, esta calza brinda ajuste firme y libertad de movimiento. Ideal para entrenamientos intensos o uso diario, combina confort, soporte y estilo atlético."
     }
   ],
   "ninios": [
     {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "ADIDAS",
-      "tipoPrenda": "Pantalón Jogger",
-      "descripcion": "Este pantalón jogger Adidas para niños está confeccionado con materiales resistentes y suaves al tacto. Su diseño incluye cintura ajustable, bolsillos funcionales y puños elásticos, ideal para jugar con libertad y comodidad durante todo el día."
-    },
-    {
-      "image": "images/buzo-blanco-6.png",
+      "image": "images/rush-guard-kid.jpg",
       "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "El short deportivo Reef para niños es fresco, liviano y duradero. Cuenta con un diseño moderno y tela de secado rápido, ideal para juegos en el parque, clases de educación física o actividades al aire libre en climas cálidos."
-    },
-    {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "La campera rompeviento Puma para niños ofrece protección ligera contra el viento y la llovizna. Su diseño con capucha y cierre frontal facilita el uso diario, mientras que su estilo moderno acompaña cualquier outfit escolar o de paseo."
-    },
-    {
-      "image": "images/buzo-blanco-6.png",
-      "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Short Reef para niños con cintura elástica, diseño colorido y costuras reforzadas. Ideal para actividades físicas o simplemente para estar cómodo en casa. Resistente al uso frecuente y fácil de lavar."
-    },
-    {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "Diseñada para soportar días ventosos, esta campera rompeviento Puma infantil combina funcionalidad con diseño moderno. Incluye bolsillos laterales, interior suave y un acabado que repele el agua, ideal para media estación."
-    },
-    {
-      "image": "images/buzo-blanco-6.png",
-      "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Short deportivo para niños Reef con tejido transpirable y diseño versátil. Perfecto para días calurosos, excursiones o juegos intensos. Ofrece total libertad de movimiento gracias a su calce relajado."
-    },
-    {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "La campera Puma ofrece una barrera efectiva contra el viento con un diseño pensado para el día a día. Es liviana, cómoda y resistente, ideal para acompañar a los más pequeños en todas sus aventuras."
+      "tipoPrenda": "Rush Guard Manga ¾",
+      "descripcion": "Protección, comodidad y libertad de movimiento para los más chicos. Esta prenda liviana y de secado rápido es ideal para actividades acuáticas, ofreciendo cuidado frente al sol y al roce. UPF 50"
     }
   ],
   "unisex": [
     {
-      "image": "images/buzo-blanco-6.png",
+      "image": "images/rush-guard-mc-unisex.jpg",
       "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Short deportivo Reef unisex, diseñado para brindar frescura y comodidad durante todo el día. Su tejido liviano, cintura ajustable y diseño moderno lo hacen ideal para cualquier actividad física o uso casual."
+      "tipoPrenda": "Rush Guard Manga Corta",
+      "descripcion": "Prenda técnica pensada para proteger la piel del sol y el roce. Confeccionada en tela elástica y liviana, ideal para deportes acuáticos o entrenamientos al aire libre.UOF 50"
     },
     {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "Campera rompeviento unisex de Puma, con tela resistente al agua y al viento. Cuenta con capucha integrada y detalles reflectantes para mayor seguridad en exteriores. Ideal para climas variables."
-    },
-    {
-      "image": "images/buzo-blanco-6.png",
+      "image": "images/rush-guard-unisex.jpg",
       "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Este short Reef unisex ofrece comodidad superior gracias a su diseño anatómico y tela de secado rápido. Perfecto para deportes, caminatas o días de verano con amigos."
-    },
-    {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "Una prenda versátil, ligera y funcional. Esta campera rompeviento Puma se adapta a cualquier género y estilo, ideal para entrenamientos al aire libre o uso urbano en media estación."
-    },
-    {
-      "image": "images/buzo-blanco-6.png",
-      "titulo": "REEF",
-      "tipoPrenda": "Short Deportivo",
-      "descripcion": "Short deportivo Reef pensado para quienes disfrutan la comodidad sin resignar diseño. Cuenta con costuras reforzadas, tela respirable y un estilo atemporal apto para todas las edades."
-    },
-    {
-      "image": "images/buzo-negro-5.png",
-      "titulo": "PUMA",
-      "tipoPrenda": "Campera Rompeviento",
-      "descripcion": "Con un corte moderno y liviano, esta campera Puma unisex es ideal para acompañarte en salidas al aire libre, entrenamientos o simplemente para sumar estilo a tu outfit diario."
+      "tipoPrenda": "Rush Guard Manga Larga ",
+      "descripcion": "Diseño funcional y ergonómico para actividades intensas en agua o tierra. Brinda cobertura extendida con máxima comodidad gracias a su tejido de secado rápido y ajuste flexible. UPF 50"
     }
   ]
 }
