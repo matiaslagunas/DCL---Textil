@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: linear-gradient(to bottom, #93cbe9, #daeef8);
+    font-weight: 340;
 }
 
 /* Título */
@@ -52,7 +53,7 @@ body {
     margin-bottom: 5em;
 }
 
-/* Contenedor de productos (scroll horizontal) */
+/* Contenedor de productos */
 .productos-container {
     display: flex;
     gap: 2rem;
@@ -60,7 +61,7 @@ body {
     width: max-content;
 }
 
-/* Tarjeta de producto */
+/* Tarjeta */
 .producto {
     flex: 0 0 auto;
     width: 300px;
@@ -75,7 +76,6 @@ body {
     height: auto;
     object-fit: contain;
     background: #ddd;
-    padding: 0;
 }
 
 .producto .info {
@@ -138,18 +138,47 @@ body {
 
 .modal-contenido {
     background: white;
-    padding: 2em;
+    padding: 1.5em;
     border-radius: 10px;
-    max-width: 1200px;
+    max-width: 800px;
     width: 90%;
     position: relative;
 }
 
+/* Zoom */
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    cursor: zoom-in;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    transition: background-position 0.1s ease, background-size 0.3s ease;
+    background-color: #eee;
+}
+
+.zoom-container:hover {
+    background-size: 300% auto;
+    cursor: zoom-out;
+}
+
+.zoom-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+}
+
+/* Imagen en modal */
 #modal-imagen {
-    width: 400px;
+    width: 300px;
     height: auto;
 }
 
+/* Botón cerrar */
 .modal .cerrar {
     position: absolute;
     top: 15px;
@@ -162,62 +191,6 @@ body {
     display: none;
 }
 
-/* Responsivo */
-@media (max-width: 990) {
-    .mobile-modal{
-        display: flex;
-        flex-direction: column !important;
-    }
-    .zoom-container {
-        position: relative;
-        overflow: none;
-        width: 100%;
-        cursor: none;
-        background-repeat: no-repeat;
-        background-size: auto; /* sin zoom de base */
-        background-position: center;
-        background-color: #eee;
-    }
-    
-    .zoom-container:hover {
-        background-size: none; /* zoom al hacer hover */
-        cursor:none;
-    }
-    
-    .zoom-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-        pointer-events: none;
-        user-select: none;
-        opacity: 0; /* se oculta para mostrar solo el fondo */
-    }
-    
-}
-@media (max-width: 800px) {
-    #modal-imagen {
-        max-width: 400px;
-        width: 80%;
-        height: auto;
-    }
-    .modal-contenido div{
-        display: grid;
-        
-    }
-}
-
-@media (max-width: 400px) {
-    #modal-imagen {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .modal-contenido {
-        background: white;
-        padding: 12px;
-    }
-}
-
 /* Tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
@@ -226,42 +199,50 @@ h1, h2, .titulo-principal {
     font-weight: 500;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 340;
+/* Layout modal */
+.mobile-modal {
+    display: flex;
+    gap: 1.5em;
+    align-items: flex-start;
 }
 
-/* Zoom para la imagen dentro del modal */
-.zoom-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    cursor: zoom-in;
-    background-repeat: no-repeat;
-    background-size: 100% auto; /* sin zoom de base */
-    background-position: center;
-    transition: background-position 0.1s ease, background-size 0.3s ease;
-    background-color: #eee;
+.texto-modal {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    color: #111;
 }
 
-.zoom-container:hover {
-    background-size: 300% auto; /* zoom al hacer hover */
-    cursor: zoom-out;
+.texto-modal h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
 }
 
-.zoom-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    pointer-events: none;
-    user-select: none;
-    opacity: 0; /* se oculta para mostrar solo el fondo */
+.texto-modal p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 800;
+    margin: 0;
+    color: #111;
 }
-/* Cuando el modal esté expandido en pantallas medianas o chicas */
+
+/* Marca como subtitulo */
+#modal-marca {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: -0.2em;
+}
+
+/* Responsivo */
 @media (max-width: 990px) {
     .mobile-modal {
         flex-direction: column !important;
-        align-items: center; /* centra la imagen y texto */
+        align-items: center;
     }
 
     .mobile-modal .zoom-container {
@@ -276,6 +257,18 @@ body {
     }
 }
 
+@media (max-width: 800px) {
+    #modal-imagen {
+        max-width: 400px;
+        width: 80%;
+        height: auto;
+    }
+
+    .modal-contenido div {
+        display: grid;
+    }
+}
+
 @media (max-width: 600px) {
     .mobile-modal {
         padding: 0;
@@ -287,5 +280,17 @@ body {
 
     .mobile-modal .texto-modal {
         padding: 0 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    #modal-imagen {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-contenido {
+        background: white;
+        padding: 12px;
     }
 }
