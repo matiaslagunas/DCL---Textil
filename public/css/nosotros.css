@@ -47,12 +47,14 @@
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 2em 15% 5em 15%;
+    padding: 0em 18% 5em 18%;
 }
 
 .contenedor-titulo-propuesta {
     width: 100%;
     text-align: center;
+    margin: 0;
+    padding-bottom: 1em;
 }
 
 .contenedor-titulo-propuesta h2 {
@@ -61,10 +63,10 @@
 }
 
 .grid-propuestaIcons {
-    margin-top: 4em;
+    margin-top: 1em;
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 100px 100px;
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-rows: 90px 50px;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -89,10 +91,11 @@
 
 .item5_item, .item6_item, .item7_item, .item8_item {
     font-size: 18px;
+ 
 }
 
 .item1_item img, .item2_item img, .item3_item img, .item4_item img {
-    width: 100px;
+    width: 90px;
     height: auto;
     color: #fff;
 }
