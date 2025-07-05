@@ -181,8 +181,8 @@ body {
 /* Botón cerrar */
 .modal .cerrar {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 8px;
+    right: 15px;
     font-size: 28px;
     cursor: pointer;
 }
@@ -204,13 +204,15 @@ h1, h2, .titulo-principal {
     display: flex;
     gap: 1.5em;
     align-items: flex-start;
+    padding: 10px;
 }
 
 .texto-modal {
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 0.7em;
+
+    padding: 10px;
     color: #111;
 }
 
