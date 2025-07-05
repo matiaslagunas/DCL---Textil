@@ -183,9 +183,9 @@ body {
     position: absolute;
     top: 8px;
     right: 15px;
-    font-size: 28px;
+    font-size: 28px; 
     cursor: pointer;
-}
+} 
 
 .oculto {
     display: none;
@@ -294,5 +294,18 @@ h1, h2, .titulo-principal {
     .modal-contenido {
         background: white;
         padding: 12px;
+    }
+    .modal .cerrar {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        font-size: 28px; 
+        cursor: pointer;
+    } 
+    .mobile-modal {
+        display: flex;
+        gap: 1.5em;
+        align-items: flex-start;
+        padding: 17px;
     }
 }
