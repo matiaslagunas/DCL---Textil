@@ -190,7 +190,13 @@ body {
 .oculto {
     display: none;
 }
-
+.texto-modal p{
+    margin-top: 15px !important;
+    
+}
+#modal-descripcion{
+    font-weight: 100 !important;
+}
 /* Tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
