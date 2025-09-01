@@ -20,15 +20,15 @@
     },
     {
       "image": "images/pantalon puma.jpg",
-      "titulo": "ADIDAS",
-      "tipoPrenda": "Pantalón Jogger",
-      "descripcion": "El pantalón jogger Adidas está diseñado para brindar confort tanto en casa como en salidas casuales. Su cintura elástica con cordón, bolsillos laterales y terminaciones en puño lo convierten en una prenda versátil, moderna y funcional para cualquier ocasión."
-    },
-    {
-      "image": "images/remera saucony.jpeg",
       "titulo": "PUMA",
       "tipoPrenda": "Short baño",
       "descripcion": "De calce cómodo y liviano, tela microfibra plana con elastano; este short es ideal para el agua, entrenamiento o uso diario. Con cintura elástica y logo PUMA estampado, combina funcionalidad y diseño."
+    },
+    {
+      "image": "images/remera saucony.jpeg",
+      "titulo": "SAUCONY",
+      "tipoPrenda": "Remera Media Maratón Ciudad de La Plata",
+      "descripcion": "Diseñada especialmente para corredores, esta remera técnica liviana ofrece frescura y comodidad en movimiento. Confeccionada en ultra microfibra, desarrollada para eventos deportivos de alto rendimiento."
     }
   ],
   "mujeres": [
